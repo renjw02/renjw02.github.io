@@ -7,18 +7,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | rjw&#39;s blog</title>
+  <title>Adding Lookup Field to a Page in Dynamics NAV | rjw&#39;s blog</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="rjw&#39;s blog">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="One of the problems I faced in building a non-trivial application that consumedNAV Web Services was figuring out how to “join” fields from different tables.For example, when exposing a list of jobs fr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Adding Lookup Field to a Page in Dynamics NAV">
+<meta property="og:url" content="http://example.com/2015/04/05/2015-04-05-Lookup-on-Page/index.html">
 <meta property="og:site_name" content="rjw&#39;s blog">
+<meta property="og:description" content="One of the problems I faced in building a non-trivial application that consumedNAV Web Services was figuring out how to “join” fields from different tables.For example, when exposing a list of jobs fr">
 <meta property="og:locale">
+<meta property="og:image" content="http://ptsteadman.github.io/images/lookup-1.PNG">
+<meta property="og:image" content="http://ptsteadman.github.io/images/lookup-2.PNG">
+<meta property="article:published_time" content="2015-04-04T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-31T12:17:23.824Z">
 <meta property="article:author" content="JiaWei Ren">
+<meta property="article:tag" content="Resources">
+<meta property="article:tag" content="NAV">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ptsteadman.github.io/images/lookup-1.PNG">
   
     <link rel="alternative" href="/atom.xml" title="rjw&#39;s blog" type="application/atom+xml">
   
@@ -122,7 +131,7 @@
 	  <a  href="/projects/">Projects</a>
 	</li>
 	
-	<li class="active">
+	<li class="">
 	  <a  href="/archives/">Blog</a>
 	</li>
 	
@@ -160,143 +169,36 @@
   <div class="container">
   <ul class="breadcrumb">
     <li><a href="/">Home</a></li>
-    <li class="active">Blog</li>
+    <li><a href="/archives/">Blog</a></li>
+    <li class="active">Post</li>
   </ul>
-<div id="main">
-  <h1>Blog</h1>
-  <div class="row">
+  <section id="main">
+    
+    <h2 itemprop="name">
+      <a class="article-title" href="/2015/04/05/2015-04-05-Lookup-on-Page/">Adding Lookup Field to a Page in Dynamics NAV</a>
+    </h2>
 
+
+    <div class="row">
 <div class="col-md-9 col-sm-9 blog-posts">
-
-
-  <section class="archives-wrap">
-    <div class="archives">
-      
-	<div class="row">
-  <div class="col-md-4 col-sm-4">
-    
-      <img src="https://s3.amazonaws.com/ptsteadman-images/hexo.png" class="img-responsive">
-    
+<article id="post-2015-04-05-Lookup-on-Page" class="article article-type-post blog-item" itemscope itemprop="blogPost">
+  <div class="article-meta">
   </div>
-  
-    <div class="col-md-8 col-sm-8">
-  
+  <div class="article-inner">
     
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2016/01/02/2016-01-02-Notes-On-Creating-A-Hexo-Theme/">Notes On Creating A Hexo Theme</a>
-    </h2>
-
-
-    <ul class="blog-info">
-      <li>
-      	<i class="fa fa-calendar"></i> 
-        <time datetime="2016-01-01T16:00:00.000Z" itemprop="datePublished">2016/01/02</time>
-
-      </li>
-      <li><i class="fa fa-comments"></i>
-        <a href="http://example.com/2016/01/02/2016-01-02-Notes-On-Creating-A-Hexo-Theme/#disqus_thread" class="article-comment-link">Comments</a>
-      </li>
-      <li>
-	<i class="fa fa-tags"></i>
-	
-  
-    <a href="/tags/Programming/" title="Programming">Programming</a>,
-  
-    <a href="/tags/Design/" title="Design">Design</a>
-  
-
-
-      </li>
-    </ul>
-    <div class="blog-item">
-      
-	Information about developing a Hexo theme, including common gotchas that we ran into.  This posts covers setting up a hexo development environment, and the seperation of theme and content.
-      
-    </div>
-    <br>
-    <br>
-    <a href="http://example.com/2016/01/02/2016-01-02-Notes-On-Creating-A-Hexo-Theme/" class="more">Read more <i class="icon-angle-right"></i></a>
-  </div>
-</div>
-<hr class="blog-post-sep">
-
-      
-	<div class="row">
-  <div class="col-md-4 col-sm-4">
     
-      <img src="https://s3.amazonaws.com/ptsteadman-images/info2.jpg" class="img-responsive">
-    
-  </div>
-  
-    <div class="col-md-8 col-sm-8">
-  
-    
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2015/05/02/2015-05-02-How-To-Impress/">How To Impress Employers at Infosessions</a>
-    </h2>
+    <header class="article-header">
+      <ul class="blog-info">
+	<li><i class="fa fa-user"></i> Patrick Steadman</li>
+	<li><i class="fa fa-calendar"></i>
+	  <time datetime="2015-04-04T16:00:00.000Z" itemprop="datePublished">2015/04/05</time>
 
-
-    <ul class="blog-info">
-      <li>
-      	<i class="fa fa-calendar"></i> 
-        <time datetime="2015-05-01T16:00:00.000Z" itemprop="datePublished">2015/05/02</time>
-
-      </li>
-      <li><i class="fa fa-comments"></i>
-        <a href="http://example.com/2015/05/02/2015-05-02-How-To-Impress/#disqus_thread" class="article-comment-link">Comments</a>
-      </li>
-      <li>
-	<i class="fa fa-tags"></i>
-	
-  
-    <a href="/tags/funny/" title="funny">funny</a>,
-  
-    <a href="/tags/employment/" title="employment">employment</a>
-  
-
-
-      </li>
-    </ul>
-    <div class="blog-item">
-      
-	Top tech talent knows that industry recruiters often bring a stack of pre-negotiated offers to university infosessions, so that they can snag programmers and UX designers who really stand out.
-      
-    </div>
-    <br>
-    <br>
-    <a href="http://example.com/2015/05/02/2015-05-02-How-To-Impress/" class="more">Read more <i class="icon-angle-right"></i></a>
-  </div>
-</div>
-<hr class="blog-post-sep">
-
-      
-	<div class="row">
-  <div class="col-md-4 col-sm-4">
-    
-      <img src="https://s3.amazonaws.com/ptsteadman-images/NAV.jpg" class="img-responsive">
-    
-  </div>
-  
-    <div class="col-md-8 col-sm-8">
-  
-    
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2015/04/08/2015-04-08-NAV-Programming-Resources/">NAV Web Service Programming Resources</a>
-    </h2>
-
-
-    <ul class="blog-info">
-      <li>
-      	<i class="fa fa-calendar"></i> 
-        <time datetime="2015-04-07T16:00:00.000Z" itemprop="datePublished">2015/04/08</time>
-
-      </li>
-      <li><i class="fa fa-comments"></i>
-        <a href="http://example.com/2015/04/08/2015-04-08-NAV-Programming-Resources/#disqus_thread" class="article-comment-link">Comments</a>
-      </li>
-      <li>
-	<i class="fa fa-tags"></i>
-	
+	</li>
+	<li class="hidden-xs"><i class="fa fa-comments"></i>
+	  <a href="http://example.com/2015/04/05/2015-04-05-Lookup-on-Page/#disqus_thread" class="article-comment-link">Comments</a>
+	</li>
+	<li class="hidden-xs"><i class="fa fa-tags"></i> 
+	  
   
     <a href="/tags/Resources/" title="Resources">Resources</a>,
   
@@ -304,225 +206,63 @@
   
 
 
-      </li>
-    </ul>
-    <div class="blog-item">
+	</li>
+      </ul>
       
-	Here are some of the resources I found helpful for learning to develop Dynamics NAV web service based applications.
-      
-    </div>
-    <br>
-    <br>
-    <a href="http://example.com/2015/04/08/2015-04-08-NAV-Programming-Resources/" class="more">Read more <i class="icon-angle-right"></i></a>
+  <div class="article-category">
+    
+    Category: 
+    
+    Categories:
+    <a class="article-category-link" href="/categories/Dynamics-NAV/">Dynamics NAV</a>
   </div>
-</div>
-<hr class="blog-post-sep">
+  <br>
 
-      
-	<div class="row">
-  <div class="col-md-4 col-sm-4">
+
+    </header>
     
-      <img src="https://s3.amazonaws.com/ptsteadman-images/lookup.jpg" class="img-responsive">
-    
-  </div>
-  
-    <div class="col-md-8 col-sm-8">
-  
-    
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2015/04/05/2015-04-05-Lookup-on-Page/">Adding Lookup Field to a Page in Dynamics NAV</a>
-    </h2>
-
-
-    <ul class="blog-info">
-      <li>
-      	<i class="fa fa-calendar"></i> 
-        <time datetime="2015-04-04T16:00:00.000Z" itemprop="datePublished">2015/04/05</time>
-
-      </li>
-      <li><i class="fa fa-comments"></i>
-        <a href="http://example.com/2015/04/05/2015-04-05-Lookup-on-Page/#disqus_thread" class="article-comment-link">Comments</a>
-      </li>
-      <li>
-	<i class="fa fa-tags"></i>
-	
-  
-    <a href="/tags/Resources/" title="Resources">Resources</a>,
-  
-    <a href="/tags/NAV/" title="NAV">NAV</a>
-  
-
-
-      </li>
-    </ul>
-    <div class="blog-item">
+    <div class="article-entry" itemprop="articleBody">
       
-	One of the problems I faced in building a non-trivial application that consumed NAV Web Services was figuring out how to join fields from different tables.
-      
-    </div>
-    <br>
-    <br>
-    <a href="http://example.com/2015/04/05/2015-04-05-Lookup-on-Page/" class="more">Read more <i class="icon-angle-right"></i></a>
-  </div>
-</div>
-<hr class="blog-post-sep">
-
-      
-	<div class="row">
-  <div class="col-md-4 col-sm-4">
-    
-      <img src="https://s3.amazonaws.com/ptsteadman-images/nginx-proxy.png" class="img-responsive">
-    
-  </div>
-  
-    <div class="col-md-8 col-sm-8">
-  
-    
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2015/04/01/2015-04-01-NGINX-Static-Locations/">Static NGINX Locations</a>
-    </h2>
-
-
-    <ul class="blog-info">
-      <li>
-      	<i class="fa fa-calendar"></i> 
-        <time datetime="2015-03-31T16:00:00.000Z" itemprop="datePublished">2015/04/01</time>
-
-      </li>
-      <li><i class="fa fa-comments"></i>
-        <a href="http://example.com/2015/04/01/2015-04-01-NGINX-Static-Locations/#disqus_thread" class="article-comment-link">Comments</a>
-      </li>
-      <li>
-	<i class="fa fa-tags"></i>
-	
-  
-    <a href="/tags/Web-Development/" title="Web Development">Web Development</a>
-  
-
-
-      </li>
-    </ul>
-    <div class="blog-item">
-      
-	Everytime I finish a project, I have to relearn how to add new 'locations' (paths) to the NGINX virtual host.
-      
-    </div>
-    <br>
-    <br>
-    <a href="http://example.com/2015/04/01/2015-04-01-NGINX-Static-Locations/" class="more">Read more <i class="icon-angle-right"></i></a>
-  </div>
-</div>
-<hr class="blog-post-sep">
-
-      
-	<div class="row">
-  <div class="col-md-4 col-sm-4">
-    
-      <img src="https://s3.amazonaws.com/ptsteadman-images/vs.jpg" class="img-responsive">
-    
-  </div>
-  
-    <div class="col-md-8 col-sm-8">
-  
-    
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/23/2015-03-23-Make-VS-Insert-Spaces/">Spaces for Newline Indents in VS</a>
-    </h2>
-
-
-    <ul class="blog-info">
-      <li>
-      	<i class="fa fa-calendar"></i> 
-        <time datetime="2015-03-22T16:00:00.000Z" itemprop="datePublished">2015/03/23</time>
-
-      </li>
-      <li><i class="fa fa-comments"></i>
-        <a href="http://example.com/2015/03/23/2015-03-23-Make-VS-Insert-Spaces/#disqus_thread" class="article-comment-link">Comments</a>
-      </li>
-      <li>
-	<i class="fa fa-tags"></i>
-	
-  
-    <a href="/tags/C/" title="C#">C#</a>,
-  
-    <a href="/tags/Visual-Studio/" title="Visual Studio">Visual Studio</a>
-  
-
-
-      </li>
-    </ul>
-    <div class="blog-item">
-      
-	Visual Studio displays tabs as having the same  width as four spaces.  But if you're collaborating with someone working  in another text editor like vim, your automatically-inserted tabs will appear larger than four spaces.
-      
-    </div>
-    <br>
-    <br>
-    <a href="http://example.com/2015/03/23/2015-03-23-Make-VS-Insert-Spaces/" class="more">Read more <i class="icon-angle-right"></i></a>
-  </div>
-</div>
-<hr class="blog-post-sep">
-
-      
-	<div class="row">
-  <div class="col-md-4 col-sm-4">
-    
-      <img src="https://s3.amazonaws.com/ptsteadman-images/helloworld.jpg" class="img-responsive">
-    
-  </div>
-  
-    <div class="col-md-8 col-sm-8">
-  
-    
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2014/02/23/2014-02-23-hello-world/">Welcome To Hexo</a>
-    </h2>
-
-
-    <ul class="blog-info">
-      <li>
-      	<i class="fa fa-calendar"></i> 
-        <time datetime="2014-02-22T16:00:00.000Z" itemprop="datePublished">2014/02/23</time>
-
-      </li>
-      <li><i class="fa fa-comments"></i>
-        <a href="http://example.com/2014/02/23/2014-02-23-hello-world/#disqus_thread" class="article-comment-link">Comments</a>
-      </li>
-      <li>
-	<i class="fa fa-tags"></i>
-	
-  
-    <a href="/tags/Welcome/" title="Welcome">Welcome</a>,
-  
-    <a href="/tags/How-To/" title="How-To">How-To</a>
-  
-
-
-      </li>
-    </ul>
-    <div class="blog-item">
-      
-	Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on github.
-      
-    </div>
-    <br>
-    <br>
-    <a href="http://example.com/2014/02/23/2014-02-23-hello-world/" class="more">Read more <i class="icon-angle-right"></i></a>
-  </div>
-</div>
-<hr class="blog-post-sep">
+        <p>One of the problems I faced in building a non-trivial application that consumed<br>NAV Web Services was figuring out how to “join” fields from different tables.<br>For example, when exposing a list of jobs from a job table which includes a<br>resource needed for the job, you might need more than just the resource id<br>that’s a field in the table: you might also need the resource name and<br>description.  While this is easy to get for one record, what about when you<br>need a few hundred records in a table that has been dynamically filtered?  When<br>exposing a Page as a web service, it’s easy to include the fields of the table<br>that the page is based on, but it’s less clear how to include fields from<br>another table.</p>
+<p>Forum posts like <a target="_blank" rel="noopener" href="http://dynamicsuser.net/forums/p/32550/170843.aspx">this</a> led me to believe that I couldn’t expose flow fields in a Page web service, and I would get exceptions when I tried to expose all the fields of a table.  In fact, it’s perfectly possible to expose a flow field: it’s <strong>flow filters</strong> that don’t work with web services.  But, I also didn’t want to modify the underlying [job] table to add a flow field, and didn’t see an easy way of adding a flow field to a Page.  I tried “joining” the data in the C# application, but found network overhead made the application unusuably slow.</p>
+<p>The solution to this problem was to use C&#x2F;AL code to the Page to effectively create a lookup &#x2F; flow field.  This way, the data is “pre-joined” before leaving the NAV Server, which is fast and clean, but you didn’t modify any tables.  Here’s how it’s done:</p>
+<p>Step 1. <strong>Add a Field with SourceExpression Set to a Function Name</strong></p>
+<p>To start, we create a Page using the wizard that includes all of the fields of an underlying table.  Then, we create manually add fields that will contain the lookup data from other tables.  The text in the SourceExpression column will be the name of the function that populates this field.<br><img src="http://ptsteadman.github.io/images/lookup-1.PNG" alt="Add a Field with SourceExpression Set to a Function Name"></p>
+<p>Step 2. <strong>Create Function in the Page’s C&#x2F;AL Code</strong></p>
+<p>With the Page field designer open, go to the functions tab of C&#x2F;AL Globals form, and add a function with the name of the text in the SourceExpression column.  Set the return type of the function with the “Locals” button, and a function trigger will appear in the C&#x2F;AL code editor for your page.  Add code to the body of the function trigger that will be called for each record to provide a value for the field.<br><img src="http://ptsteadman.github.io/images/lookup-2.PNG" alt="Create Function in the Page&#39;s C/AL Code"></p>
 
       
     </div>
+  </div>
+  
     
-      <div id="page-nav" class="pagination">
-	<span class="page-number current">1</span>
+<nav id="article-nav">
+  
+    <a href="/2015/04/08/2015-04-08-NAV-Programming-Resources/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          NAV Web Service Programming Resources
+        
       </div>
-    
-  </section>
+    </a>
+  
+  
+    <a href="/2015/04/01/2015-04-01-NGINX-Static-Locations/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Static NGINX Locations</div>
+    </a>
+  
+</nav>
+
+  
+  <br>
+</article>
+
+
+
 
 </div>
-
 <div class="col-md-3 col-sm-3 blog-sidebar">
   <!-- CATEGORIES START -->
 <h2 class="no-top-space">Categories</h2>
@@ -623,10 +363,9 @@
 <!-- END FEATURED POSTS -->                            
 
 </div>
-
 </div>
 
-</div>
+  </section>
 </div>
 
     <!-- BEGIN PRE-FOOTER -->
