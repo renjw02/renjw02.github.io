@@ -231,13 +231,21 @@
 <p><strong>如果找到循环的一个秩函数，则循环一定终止。</strong></p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*@ requires m &gt;= n &amp;&amp; n &gt; 0;</span></span><br><span class="line"><span class="comment">ensures a = gcd(m, n) */</span></span><br><span class="line"><span class="function"><span class="built_in">int</span> <span class="title">fGCD</span>(<span class="params"><span class="built_in">int</span> m, <span class="built_in">int</span> n</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">int</span> a = m;</span><br><span class="line">    <span class="built_in">int</span> b = n;</span><br><span class="line">    <span class="comment">/*@ loop invariant</span></span><br><span class="line"><span class="comment">    a &gt;= b &amp;&amp; b &gt;= 0 &amp;&amp;</span></span><br><span class="line"><span class="comment">    gcd(a,b) == gcd(m,n) */</span></span><br><span class="line">    <span class="comment">/*@ loop variant a + b */</span></span><br><span class="line">    <span class="keyword">while</span> (b != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">int</span> tmp = a % b;</span><br><span class="line">        a = b;</span><br><span class="line">        b = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*@ assert a == gcd(m,n);*/</span></span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
       
     </div>
   </div>
   
     
 <nav id="article-nav">
+  
+    <a href="/2023/06/01/theories/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          一阶理论
+        
+      </div>
+    </a>
   
   
     <a href="/2023/06/01/first-order-logic/" id="article-nav-older" class="article-nav-link-wrap">
@@ -264,11 +272,11 @@
     <ul class="nav sidebar-categories margin-bottom-40">
       
 	<li>
-	  <a href="/categories/Hexo/">Hexo (2)</a>
+	  <a href="/categories/NET/">.NET (1)</a>
 	</li>
       
 	<li>
-	  <a href="/categories/NET/">.NET (1)</a>
+	  <a href="/categories/Hexo/">Hexo (2)</a>
 	</li>
       
 	<li>
@@ -317,10 +325,10 @@
     
       <div class="row margin-bottom-10">
 	<div class="col-md-4">
-	  <img src="https://s3.amazonaws.com/ptsteadman-images/helloworld.jpg" class="img-responsive ">
+	  <img src="https://s3.amazonaws.com/ptsteadman-images/vs.jpg" class="img-responsive ">
 	</div>
 	<div class="col-md-8">
-	  <h3><a href="http://example.com/2014/02/23/2014-02-23-hello-world/">Welcome To Hexo</a></h3>
+	  <h3><a href="http://example.com/2015/03/23/2015-03-23-Make-VS-Insert-Spaces/">Spaces for Newline Indents in VS</a></h3>
 	</div>                        
       </div>
     
@@ -328,10 +336,10 @@
     
       <div class="row margin-bottom-10">
 	<div class="col-md-4">
-	  <img src="https://s3.amazonaws.com/ptsteadman-images/vs.jpg" class="img-responsive ">
+	  <img src="https://s3.amazonaws.com/ptsteadman-images/helloworld.jpg" class="img-responsive ">
 	</div>
 	<div class="col-md-8">
-	  <h3><a href="http://example.com/2015/03/23/2015-03-23-Make-VS-Insert-Spaces/">Spaces for Newline Indents in VS</a></h3>
+	  <h3><a href="http://example.com/2014/02/23/2014-02-23-hello-world/">Welcome To Hexo</a></h3>
 	</div>                        
       </div>
     
@@ -345,6 +353,8 @@
 	  <h3><a href="http://example.com/2015/04/01/2015-04-01-NGINX-Static-Locations/">Static NGINX Locations</a></h3>
 	</div>                        
       </div>
+    
+  
     
   
     
