@@ -272,7 +272,7 @@ location /array &#123;
     <ul class="nav sidebar-categories margin-bottom-40">
       
 	<li>
-	  <a href="/categories/NET/">.NET (1)</a>
+	  <a href="/categories/NGINX/">NGINX (1)</a>
 	</li>
       
 	<li>
@@ -280,7 +280,7 @@ location /array &#123;
 	</li>
       
 	<li>
-	  <a href="/categories/NGINX/">NGINX (1)</a>
+	  <a href="/categories/NET/">.NET (1)</a>
 	</li>
       
 	<li>
@@ -325,10 +325,10 @@ location /array &#123;
     
       <div class="row margin-bottom-10">
 	<div class="col-md-4">
-	  <img src="https://s3.amazonaws.com/ptsteadman-images/vs.jpg" class="img-responsive ">
+	  <img src="https://s3.amazonaws.com/ptsteadman-images/nginx-proxy.png" class="img-responsive ">
 	</div>
 	<div class="col-md-8">
-	  <h3><a href="http://example.com/2015/03/23/2015-03-23-Make-VS-Insert-Spaces/">Spaces for Newline Indents in VS</a></h3>
+	  <h3><a href="http://example.com/2015/04/01/2015-04-01-NGINX-Static-Locations/">Static NGINX Locations</a></h3>
 	</div>                        
       </div>
     
@@ -347,10 +347,10 @@ location /array &#123;
     
       <div class="row margin-bottom-10">
 	<div class="col-md-4">
-	  <img src="https://s3.amazonaws.com/ptsteadman-images/nginx-proxy.png" class="img-responsive ">
+	  <img src="https://s3.amazonaws.com/ptsteadman-images/vs.jpg" class="img-responsive ">
 	</div>
 	<div class="col-md-8">
-	  <h3><a href="http://example.com/2015/04/01/2015-04-01-NGINX-Static-Locations/">Static NGINX Locations</a></h3>
+	  <h3><a href="http://example.com/2015/03/23/2015-03-23-Make-VS-Insert-Spaces/">Spaces for Newline Indents in VS</a></h3>
 	</div>                        
       </div>
     
@@ -526,5 +526,20 @@ location /array &#123;
 
 <!-- END INTEGRATIONS -->
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>

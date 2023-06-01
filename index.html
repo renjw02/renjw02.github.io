@@ -205,7 +205,19 @@
 <li><p>许多一阶理论是可判定的</p>
 </li>
 </ul>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p><img src="E:\blog\myBlog\source\_posts\theories\2023-06-01 212044.png" alt="definition"></p>
+<p>非逻辑符号包括函数、谓词、常元等。</p>
+<blockquote>
+<p>一些基本概念在理论 <em>T</em> 下的扩展定义：</p>
+<p><em>T</em> -解释（<em>T</em> -interpretation）：满足 <em>T</em> 中所有公理的解释 <em>M</em> 称<em>T</em> -解释，即 <em>∀A</em> <em>∈ A.</em> [[<em>A</em>]]<em>M</em> = <em>true</em>。</p>
+<p><em>T</em> -可满足（<em>T</em> -satisfaction）：如果存在一个 <em>T</em> -解释 <em>M</em> 和一个赋值 <em>ρ</em>，使得 [[<em>φ</em>]]<em>M,ρ</em> 为真，则称 <em>φ</em> 是 <em>T</em> -可满足的。</p>
+<p><em>T</em> -有效式（<em>T</em> -validity）：如果对任意 <em>T</em> -解释 <em>M</em> 和任意赋值 <em>ρ</em>，[[<em>φ</em>]]<em>M,ρ</em> 都为真，则称 <em>φ</em> 是 <em>T</em> -有效式，记作 <em>T |</em>= <em>φ</em>。</p>
+<p><em>T</em> -语义蕴含（<em>T</em> -entailment）：如果 <em>φ</em> <em>→</em> <em>ψ</em> 是 <em>T</em> -有效式，则称<em>φ</em> <em>T</em> -语义蕴含 <em>ψ</em>，也称 <em>ψ</em> 是 <em>φ</em> 在理论 <em>T</em> 下的逻辑推论。</p>
+</blockquote>
+<h3 id="可判定性"><a href="#可判定性" class="headerlink" title="可判定性"></a>可判定性</h3><p>如果存在一个算法，能够在有限时间内正确地判定任意给定的 Σ-公式的 <em>T</em> -有效性，就称该理论是可判定的。</p>
+<p><strong>一阶理论片段（<em>fragment</em>）</strong>：对 Σ-公式的语法进一步引入一定限制，如不允许量词出现。</p>
+<p>对于许多不可判定的一阶理论，可以通过对其语法进行限制得到可判定的理论片段。</p>
+
       
     </div>
     <br>
@@ -510,9 +522,9 @@
 	<i class="fa fa-tags"></i>
 	
   
-    <a href="/tags/NAV/" title="NAV">NAV</a>,
+    <a href="/tags/Resources/" title="Resources">Resources</a>,
   
-    <a href="/tags/Resources/" title="Resources">Resources</a>
+    <a href="/tags/NAV/" title="NAV">NAV</a>
   
 
 
@@ -559,9 +571,9 @@
 	<i class="fa fa-tags"></i>
 	
   
-    <a href="/tags/NAV/" title="NAV">NAV</a>,
+    <a href="/tags/Resources/" title="Resources">Resources</a>,
   
-    <a href="/tags/Resources/" title="Resources">Resources</a>
+    <a href="/tags/NAV/" title="NAV">NAV</a>
   
 
 
@@ -788,5 +800,20 @@
 
 <!-- END INTEGRATIONS -->
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
