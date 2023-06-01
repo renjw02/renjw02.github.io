@@ -229,10 +229,10 @@
 <h2 id="Creating-a-Custom-Index-File-in-Hexo"><a href="#Creating-a-Custom-Index-File-in-Hexo" class="headerlink" title="Creating a Custom Index File in Hexo"></a>Creating a Custom Index File in Hexo</h2><p>Trying to generate a custom index file in source, hexo would ignore<br><code>source/index.md</code> no matter what I did.  What I had to do was uninstall<br><code>hexo-generator-index</code>.  <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/1077">See<br>here</a>.  Then it works.  So, that<br>will be part of the setup for my theme.  But, it’s worth it in order to properly<br>seperate the theme from the content, I think.  Having everyone edit the theme<br>index.ejs template is no good.</p>
 <h2 id="Hexo-Rendering-Raw-EJS-File-Problem-I-Encountered"><a href="#Hexo-Rendering-Raw-EJS-File-Problem-I-Encountered" class="headerlink" title="Hexo Rendering Raw EJS File Problem I Encountered"></a>Hexo Rendering Raw EJS File Problem I Encountered</h2><p>Sometimes the server would keep rendering an old version of my code, but as<br>text.  So I’d see stuff like</p>
 <pre><code>&lt;% if (site.tags.length)&#123; %&gt;
-</code></pre><p>The raw ejs, essentially.  Restarting the server or running <code>hexo clean</code> didn’t<br>do anything.</p>
+</code></pre>
+<p>The raw ejs, essentially.  Restarting the server or running <code>hexo clean</code> didn’t<br>do anything.</p>
 <p>After some time, I realized it was due to the gedit swap files being read by<br>hexo as the actual layout files: for example, <code>tag.ejs~</code>.  My <code>partial</code> helpers<br>looked like: <code>&lt;%- partial(&#39;_partials/tag&#39;) %&gt;</code>, and apparently hexo was reading<br>in <code>tag.ejs~</code> instead of <code>tag.ejs</code>.  And therefore, the ejs wasn’t rendering.</p>
-<p>To fix this, I simply changed my partial helper to <code>&lt;%-
-partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
+<p>To fix this, I simply changed my partial helper to <code>&lt;%- partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
 <h2 id="Hexo-Excerpt-Variable"><a href="#Hexo-Excerpt-Variable" class="headerlink" title="Hexo Excerpt Variable"></a>Hexo Excerpt Variable</h2><p>I was confused by the behavior of the hexo <code>excerpt</code> variable.  If you define<br><code>excerpt: something</code> in the front matter, hexo ignores that.  Instead, to get it<br>to work, one needs to add a <code>&lt;!-- more --&gt;</code> comment in the source of the post.<br>Or, you can install a plugin that allows you to define custom excerpt in the<br>front matter.</p>
 <h2 id="Scripts-Directory"><a href="#Scripts-Directory" class="headerlink" title="Scripts Directory"></a>Scripts Directory</h2><p>One of the things I really discovered too late is the “Scripts” directory in the<br>theme folder.  In Hexo, the various plugins drive the structure of the site, as<br>opposed to the placement of different files and directories, as in Jekyll.  The<br>plugins programatically create folder structure, etc, where in Jekyll I mostly<br>used the liquid markup to structure the site.  </p>
 <p>The problem is, then, that the user wants to extend hexo to do some sort of<br>custom thing.  If one had to publish a new plugin, that’d be too much work.  But<br>the theme level scripts folder allows one to extend the base hexo functionality<br>in ‘user space’ effectively.</p>
@@ -278,19 +278,19 @@ partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
     <ul class="nav sidebar-categories margin-bottom-40">
       
 	<li>
-	  <a href="/categories/NET/">.NET (1)</a>
-	</li>
-      
-	<li>
-	  <a href="/categories/Hexo/">Hexo (2)</a>
-	</li>
-      
-	<li>
 	  <a href="/categories/NGINX/">NGINX (1)</a>
 	</li>
       
 	<li>
+	  <a href="/categories/NET/">.NET (1)</a>
+	</li>
+      
+	<li>
 	  <a href="/categories/Dynamics-NAV/">Dynamics NAV (2)</a>
+	</li>
+      
+	<li>
+	  <a href="/categories/Hexo/">Hexo (2)</a>
 	</li>
       
 	<li>
@@ -331,12 +331,25 @@ partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
     
       <div class="row margin-bottom-10">
 	<div class="col-md-4">
+	  <img src="https://s3.amazonaws.com/ptsteadman-images/nginx-proxy.png" class="img-responsive ">
+	</div>
+	<div class="col-md-8">
+	  <h3><a href="http://example.com/2015/04/01/2015-04-01-NGINX-Static-Locations/">Static NGINX Locations</a></h3>
+	</div>                        
+      </div>
+    
+  
+    
+      <div class="row margin-bottom-10">
+	<div class="col-md-4">
 	  <img src="https://s3.amazonaws.com/ptsteadman-images/vs.jpg" class="img-responsive ">
 	</div>
 	<div class="col-md-8">
 	  <h3><a href="http://example.com/2015/03/23/2015-03-23-Make-VS-Insert-Spaces/">Spaces for Newline Indents in VS</a></h3>
 	</div>                        
       </div>
+    
+  
     
   
     
@@ -348,19 +361,6 @@ partial(&#39;_partials/tag.ejs&#39;) %&gt;</code>.  Problem solved.</p>
 	  <h3><a href="http://example.com/2014/02/23/2014-02-23-hello-world/">Welcome To Hexo</a></h3>
 	</div>                        
       </div>
-    
-  
-    
-      <div class="row margin-bottom-10">
-	<div class="col-md-4">
-	  <img src="https://s3.amazonaws.com/ptsteadman-images/nginx-proxy.png" class="img-responsive ">
-	</div>
-	<div class="col-md-8">
-	  <h3><a href="http://example.com/2015/04/01/2015-04-01-NGINX-Static-Locations/">Static NGINX Locations</a></h3>
-	</div>                        
-      </div>
-    
-  
     
   
     
