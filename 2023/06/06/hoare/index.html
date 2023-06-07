@@ -12,17 +12,20 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <meta name="description" content="霍尔证明系统程序规约">
+  <meta name="description" content="霍尔证明系统程序规约霍尔三元组 霍尔三元组（Hoare Triple）是形如  \{φ\} \ st \ \{ψ\}的式子，其中 st 是程序，φ 和 ψ 是逻辑公式；φ 和 ψ 分别称为 st的前置条件和后置条件。  霍尔三元组的含义：从任何满足 φ 的前状态出发执行 st，如果 st终止，那么后状态必定满足 ψ 断言霍尔三元组中的 φ 和 ψ 都是某个一阶理论（如整数算术理论 $T_{PA}$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hoare">
 <meta property="og:url" content="http://example.com/2023/06/06/hoare/index.html">
 <meta property="og:site_name" content="rjw&#39;s blog">
-<meta property="og:description" content="霍尔证明系统程序规约">
+<meta property="og:description" content="霍尔证明系统程序规约霍尔三元组 霍尔三元组（Hoare Triple）是形如  \{φ\} \ st \ \{ψ\}的式子，其中 st 是程序，φ 和 ψ 是逻辑公式；φ 和 ψ 分别称为 st的前置条件和后置条件。  霍尔三元组的含义：从任何满足 φ 的前状态出发执行 st，如果 st终止，那么后状态必定满足 ψ 断言霍尔三元组中的 φ 和 ψ 都是某个一阶理论（如整数算术理论 $T_{PA}$">
 <meta property="og:locale">
+<meta property="og:image" content="http://example.com/2023/06/06/hoare/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20212612.png">
+<meta property="og:image" content="http://example.com/2023/06/06/hoare/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20213133.png">
 <meta property="article:published_time" content="2023-06-06T14:17:19.000Z">
-<meta property="article:modified_time" content="2023-06-06T14:18:01.353Z">
+<meta property="article:modified_time" content="2023-06-07T13:54:54.616Z">
 <meta property="article:author" content="JiaWei Ren">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/06/06/hoare/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20212612.png">
   
     <link rel="alternative" href="/atom.xml" title="rjw&#39;s blog" type="application/atom+xml">
   
@@ -208,13 +211,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="霍尔证明系统"><a href="#霍尔证明系统" class="headerlink" title="霍尔证明系统"></a>霍尔证明系统</h1><h2 id="程序规约"><a href="#程序规约" class="headerlink" title="程序规约"></a>程序规约</h2>
+        <h1 id="霍尔证明系统"><a href="#霍尔证明系统" class="headerlink" title="霍尔证明系统"></a>霍尔证明系统</h1><h2 id="程序规约"><a href="#程序规约" class="headerlink" title="程序规约"></a>程序规约</h2><h3 id="霍尔三元组"><a href="#霍尔三元组" class="headerlink" title="霍尔三元组"></a>霍尔三元组</h3><blockquote>
+<p>霍尔三元组（Hoare Triple）是形如</p>
+<script type="math/tex; mode=display">
+\{φ\} \ st \ \{ψ\}</script><p>的式子，其中 <em>st</em> 是程序，<em>φ</em> 和 <em>ψ</em> 是逻辑公式；<em>φ</em> 和 <em>ψ</em> 分别称为 <em>st</em>的前置条件和后置条件。</p>
+</blockquote>
+<p>霍尔三元组的含义：从任何满足 <em>φ</em> 的前状态出发执行 <em>st</em>，如果 <em>st</em>终止，那么后状态必定满足 <em>ψ</em></p>
+<h3 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h3><p>霍尔三元组中的 <em>φ</em> 和 <em>ψ</em> 都是某个一阶理论（如整数算术理论 $T_{PA}$）的 Σ<em>T</em> 公式，称为断言。</p>
+<h3 id="状态集合"><a href="#状态集合" class="headerlink" title="状态集合"></a>状态集合</h3><blockquote>
+<p> 设 <em>φ</em> 是一个断言，以 <em>{<strong>φ</strong>}</em> 表示满足 <em>φ</em> 的所有状态的集合，即：</p>
+<script type="math/tex; mode=display">
+\{φ\} ::= \{s\ |\ [[φ]]_{M,s} = true\}</script><p>其中，$[[φ]]_{M,s}$ 中的 <em>M</em> 由对应的一阶理论确定；在不引起歧义的情况下，常简记为$ [[φ]]_s$。</p>
+</blockquote>
+<h3 id="后像"><a href="#后像" class="headerlink" title="后像"></a>后像</h3><blockquote>
+<p>设 <em>R</em> 是定义在集合 <em>X</em> 上的一个二元关系，<em>Y</em> <em>⊆</em> <em>X</em> 是 <em>X</em> 的一个子集，<em>Y</em> 关于 <em>R</em> 的后像（post-image）定义为：</p>
+<p>$post(Y, R) ::= \{x ∈ X | 存在 y ∈ Y 使得 (y, x) ∈ R\}$</p>
+</blockquote>
+<h3 id="有效的霍尔三元组"><a href="#有效的霍尔三元组" class="headerlink" title="有效的霍尔三元组"></a>有效的霍尔三元组</h3><img src="/2023/06/06/hoare/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20212612.png" class="">
+<p><strong>证明霍尔三元组有效</strong>：对前置条件中的任一状态，经过st后，能到后置条件的状态</p>
+<h2 id="霍尔证明系统-1"><a href="#霍尔证明系统-1" class="headerlink" title="霍尔证明系统"></a>霍尔证明系统</h2><h3 id="推理规则"><a href="#推理规则" class="headerlink" title="推理规则"></a>推理规则</h3><img src="/2023/06/06/hoare/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20213133.png" class="">
+<p><strong>注：循环规则的前置条件φ是循环不变式</strong></p>
+<p>应运用推理规则证明某条霍尔三元组的有效性</p>
+<h3 id="规则可靠性"><a href="#规则可靠性" class="headerlink" title="规则可靠性"></a>规则可靠性</h3><p>定义：在前提有效的情况下，结论也一定有效</p>
+<p>定理：霍尔证明系统是可靠的，完备的</p>
+
       
     </div>
   </div>
   
     
 <nav id="article-nav">
+  
+    <a href="/2023/06/07/array/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          array
+        
+      </div>
+    </a>
   
   
     <a href="/2023/06/06/IMP-language/" id="article-nav-older" class="article-nav-link-wrap">
@@ -245,6 +280,10 @@
 	</li>
       
 	<li>
+	  <a href="/categories/NGINX/">NGINX (1)</a>
+	</li>
+      
+	<li>
 	  <a href="/categories/Dynamics-NAV/">Dynamics NAV (2)</a>
 	</li>
       
@@ -253,15 +292,11 @@
 	</li>
       
 	<li>
-	  <a href="/categories/NGINX/">NGINX (1)</a>
-	</li>
-      
-	<li>
 	  <a href="/categories/Humor/">Humor (1)</a>
 	</li>
       
 	<li>
-	  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/">软件分析 (5)</a>
+	  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/">软件分析 (7)</a>
 	</li>
       
 	<li>
@@ -307,6 +342,15 @@
     
   
     
+      <div class="row margin-bottom-10">
+	<div class="col-md-4">
+	  <img src="https://s3.amazonaws.com/ptsteadman-images/nginx-proxy.png" class="img-responsive ">
+	</div>
+	<div class="col-md-8">
+	  <h3><a href="http://example.com/2015/04/01/2015-04-01-NGINX-Static-Locations/">Static NGINX Locations</a></h3>
+	</div>                        
+      </div>
+    
   
     
   
@@ -322,14 +366,9 @@
     
   
     
-      <div class="row margin-bottom-10">
-	<div class="col-md-4">
-	  <img src="https://s3.amazonaws.com/ptsteadman-images/nginx-proxy.png" class="img-responsive ">
-	</div>
-	<div class="col-md-8">
-	  <h3><a href="http://example.com/2015/04/01/2015-04-01-NGINX-Static-Locations/">Static NGINX Locations</a></h3>
-	</div>                        
-      </div>
+  
+    
+  
     
   
     
