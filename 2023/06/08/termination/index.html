@@ -7,18 +7,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>rjw&#39;s blog</title>
+  <title>termination | rjw&#39;s blog</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="rjw&#39;s blog">
-<meta property="og:url" content="http://example.com/page/2/index.html">
+  <meta name="description" content="程序终止性在前面讨论程序正确性时，都限定在程序终止的情况下进行讨论，这种正确性称程序的部分正确性  程序的完全正确性 (total correctness)，记为  [φ] \ st\  [ψ]表示：  从满足 φ 的状态执行语句 st， 一定终止， 且结束时的状态满足 ψ。   完全正确性 &#x3D; 部分正确性 + 终止性 程序终止性（termination）：程序是否对所有输入都停机 程序终止性问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="termination">
+<meta property="og:url" content="http://example.com/2023/06/08/termination/index.html">
 <meta property="og:site_name" content="rjw&#39;s blog">
+<meta property="og:description" content="程序终止性在前面讨论程序正确性时，都限定在程序终止的情况下进行讨论，这种正确性称程序的部分正确性  程序的完全正确性 (total correctness)，记为  [φ] \ st\  [ψ]表示：  从满足 φ 的状态执行语句 st， 一定终止， 且结束时的状态满足 ψ。   完全正确性 &#x3D; 部分正确性 + 终止性 程序终止性（termination）：程序是否对所有输入都停机 程序终止性问题">
 <meta property="og:locale">
+<meta property="og:image" content="http://example.com/2023/06/08/termination/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-08%20194516.png">
+<meta property="og:image" content="http://example.com/2023/06/08/termination/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-08%20200702.png">
+<meta property="article:published_time" content="2023-06-08T11:34:08.000Z">
+<meta property="article:modified_time" content="2023-06-08T12:19:03.677Z">
 <meta property="article:author" content="JiaWei Ren">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/06/08/termination/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-08%20194516.png">
   
     <link rel="alternative" href="/atom.xml" title="rjw&#39;s blog" type="application/atom+xml">
   
@@ -153,159 +160,207 @@
 </div>
 <!-- Header END -->
 
-  
   <div class="container">
-    <ul class="breadcrumb">
-      <li class="active">Home</li>
-    </ul>
-  <div id="main">
+  <ul class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><a href="/archives/">Blog</a></li>
+    <li class="active">Post</li>
+  </ul>
+  <section id="main">
+    
+    <h2 itemprop="name">
+      <a class="article-title" href="/2023/06/08/termination/">termination</a>
+    </h2>
+
+
     <div class="row">
-
-<div class="col-xs-12 blog-posts">
-
-
-  <section class="archives-wrap">
-    <div class="archives">
-      
-	<div class="row">
-  <div class="col-md-4 col-sm-4">
-    
+<div class="col-md-9 col-sm-9 blog-posts">
+<article id="post-termination" class="article article-type-post blog-item" itemscope itemprop="blogPost">
+  <div class="article-meta">
   </div>
-  
-    <div class="col-xs-12">
-  
+  <div class="article-inner">
     
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2023/06/01/basic-concept/">基本概念</a>
-    </h2>
-
-
-    <ul class="blog-info">
-      <li>
-      	<i class="fa fa-calendar"></i> 
-        <time datetime="2023-06-01T11:45:01.000Z" itemprop="datePublished">2023/06/01</time>
-
-      </li>
-      <li><i class="fa fa-comments"></i>
-        <a href="http://example.com/2023/06/01/basic-concept/#disqus_thread" class="article-comment-link">Comments</a>
-      </li>
-      <li>
-	<i class="fa fa-tags"></i>
-	
-
-      </li>
-    </ul>
-    <div class="blog-item">
-      
-	软件分析基本概念
-      
-    </div>
-    <br>
-    <br>
-    <a href="http://example.com/2023/06/01/basic-concept/" class="more">Read more <i class="icon-angle-right"></i></a>
-  </div>
-</div>
-<hr class="blog-post-sep">
-
-      
-	<div class="row">
-  <div class="col-md-4 col-sm-4">
     
-  </div>
-  
-    <div class="col-xs-12">
-  
+    <header class="article-header">
+      <ul class="blog-info">
+	<li><i class="fa fa-user"></i> Anonymous</li>
+	<li><i class="fa fa-calendar"></i>
+	  <time datetime="2023-06-08T11:34:08.000Z" itemprop="datePublished">2023/06/08</time>
+
+	</li>
+	<li class="hidden-xs"><i class="fa fa-comments"></i>
+	  <a href="http://example.com/2023/06/08/termination/#disqus_thread" class="article-comment-link">Comments</a>
+	</li>
+	<li class="hidden-xs"><i class="fa fa-tags"></i> 
+	  
+
+	</li>
+      </ul>
+      
+  <div class="article-category">
     
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2023/06/01/first-order-logic/">一阶逻辑</a>
-    </h2>
-
-
-    <ul class="blog-info">
-      <li>
-      	<i class="fa fa-calendar"></i> 
-        <time datetime="2023-06-01T11:45:01.000Z" itemprop="datePublished">2023/06/01</time>
-
-      </li>
-      <li><i class="fa fa-comments"></i>
-        <a href="http://example.com/2023/06/01/first-order-logic/#disqus_thread" class="article-comment-link">Comments</a>
-      </li>
-      <li>
-	<i class="fa fa-tags"></i>
-	
-
-      </li>
-    </ul>
-    <div class="blog-item">
-      
-	一阶逻辑
-      
-    </div>
-    <br>
-    <br>
-    <a href="http://example.com/2023/06/01/first-order-logic/" class="more">Read more <i class="icon-angle-right"></i></a>
-  </div>
-</div>
-<hr class="blog-post-sep">
-
-      
-	<div class="row">
-  <div class="col-md-4 col-sm-4">
+    Category: 
     
+    Categories:
+    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/">软件分析</a>
   </div>
-  
-    <div class="col-xs-12">
-  
+  <br>
+
+
+    </header>
     
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2023/06/01/propositional-logic/">命题逻辑</a>
-    </h2>
-
-
-    <ul class="blog-info">
-      <li>
-      	<i class="fa fa-calendar"></i> 
-        <time datetime="2023-06-01T11:45:01.000Z" itemprop="datePublished">2023/06/01</time>
-
-      </li>
-      <li><i class="fa fa-comments"></i>
-        <a href="http://example.com/2023/06/01/propositional-logic/#disqus_thread" class="article-comment-link">Comments</a>
-      </li>
-      <li>
-	<i class="fa fa-tags"></i>
-	
-
-      </li>
-    </ul>
-    <div class="blog-item">
+    <div class="article-entry" itemprop="articleBody">
       
-	命题逻辑
-      
-    </div>
-    <br>
-    <br>
-    <a href="http://example.com/2023/06/01/propositional-logic/" class="more">Read more <i class="icon-angle-right"></i></a>
-  </div>
-</div>
-<hr class="blog-post-sep">
+        <h1 id="程序终止性"><a href="#程序终止性" class="headerlink" title="程序终止性"></a>程序终止性</h1><p>在前面讨论程序正确性时，都限定在程序终止的情况下进行讨论，这种正确性称程序的部分正确性</p>
+<blockquote>
+<p>程序的完全正确性 (total correctness)，记为</p>
+<script type="math/tex; mode=display">
+[φ] \ st\  [ψ]</script><p>表示：</p>
+<ul>
+<li>从满足 φ 的状态执行语句 st，</li>
+<li>一定终止，</li>
+<li>且结束时的状态满足 ψ。</li>
+</ul>
+</blockquote>
+<p><strong>完全正确性 = 部分正确性 + 终止性</strong></p>
+<p>程序终止性（termination）：程序是否对所有输入都停机</p>
+<p>程序终止性问题是<strong>不可判定问题</strong> </p>
+<h2 id="良基关系"><a href="#良基关系" class="headerlink" title="良基关系"></a>良基关系</h2><blockquote>
+<p>集合 S 上的二元关系 ≺ 称为良基关系（well-founded relation），当且仅当：</p>
+<ul>
+<li>集合 S 中不存在无穷序列 $s_1$, $s_2$, . . .，使得对于任意的 i &gt; 0 有<br>$s_{i+1} ≺ s_i$；</li>
+<li>即集合 S 中不存在关于 ≺ 的无穷下降序列</li>
+</ul>
+</blockquote>
+<h3 id="字典序良基关系"><a href="#字典序良基关系" class="headerlink" title="字典序良基关系"></a>字典序良基关系</h3><img src="/2023/06/08/termination/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-08%20194516.png" class="">
+<h2 id="秩函数"><a href="#秩函数" class="headerlink" title="秩函数"></a>秩函数</h2><blockquote>
+<p>设 ≺ 是定义在集合 W 上的良基关系。考虑循环 while (p){st}，设S 是程序中所有可达状态的集合，如果存在一个从 S 到 W 的映射函数 δ，使得对程序经过循环头的任意相邻两次状态 s 和 s′，<br>$(δ(s^<br>′<br>), δ(s)) ∈ ≺ $成立，则称 δ 为该循环的秩函数（rankingfunction）。</p>
+</blockquote>
+<p>秩函数也被称为循环变式，其（1）值有下界；（2）循环每迭代一次，其值严格下降，且下降幅度不会趋向于无穷小</p>
+<p><strong>程序终止性</strong>：如果循环有秩函数，则循环是终止的。</p>
+<p>如果程序中每个循环都有秩函数，则程序是终止的。</p>
+<h3 id="证明程序终止性"><a href="#证明程序终止性" class="headerlink" title="证明程序终止性"></a>证明程序终止性</h3><p>证明程序终止性的基本步骤：</p>
+<ol>
+<li><p>确定集合 <em>W</em> 以及一个定义在 <em>W</em> 上的良基关系 <em>≺</em></p>
+<ul>
+<li>例如，N 和定义在 N 上的小于关系 <em>&lt;</em></li>
+<li>必要时，引入 (N<em>, &lt;</em>) 的 <em>n</em> 元组，基于其字典序良基关系来寻找秩函数。</li>
+</ul>
+</li>
+<li><p>确定一个从程序状态集到 <em>W</em> 的映射函数 <em>δ</em> : <em>S →</em> <em>W</em></p>
+</li>
+<li><p>证明 <em>δ</em> 关于 <em>≺</em> 在每个基本路径上都是下降的。</p>
+</li>
+</ol>
+<p><strong>常用 (Z, &lt;N)</strong>寻找秩函数</p>
+<h3 id="标注秩函数"><a href="#标注秩函数" class="headerlink" title="标注秩函数"></a>标注秩函数</h3><p>在基本路径中使用 ↓ 标注秩函数；</p>
+<p>所有循环都需要标注秩函数；<br>例如：<br>↓ i<br>↓ u − l + 1<br>↓ (i + 1, j − 1)</p>
+<p><strong>秩函数的标注是为了确保循环能终止，递归也是同理</strong></p>
+<p><strong>因此循环的基本路径的前后都有秩函数；递归不一定，只有在子递归处才有后面的秩函数</strong></p>
+<h3 id="验证条件"><a href="#验证条件" class="headerlink" title="验证条件"></a>验证条件</h3><img src="/2023/06/08/termination/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-08%20200702.png" class="" title="屏幕截图 2023-06-08 200702">
 
       
     </div>
+  </div>
+  
     
-      <div id="page-nav" class="pagination">
-	<a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+<nav id="article-nav">
+  
+    <a href="/2023/06/08/cfa/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          cfa
+        
       </div>
+    </a>
+  
+  
+    <a href="/2023/06/08/procedure/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">procedure</div>
+    </a>
+  
+</nav>
+
+  
+  <br>
+</article>
+
+
+
+
+</div>
+<div class="col-md-3 col-sm-3 blog-sidebar">
+  <!-- CATEGORIES START -->
+<h2 class="no-top-space">Categories</h2>
+
+<div class="widget-wrap">
+  <div class="widget">
+    <ul class="nav sidebar-categories margin-bottom-40">
+      
+	<li>
+	  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/">软件分析 (12)</a>
+	</li>
+      
+	<li>
+	  <a href="/categories/%E4%B8%80%E9%98%B6%E7%90%86%E8%AE%BA/">一阶理论 (1)</a>
+	</li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<!-- CATEGORIES END -->
+
+<!-- BEGIN BLOG TAGS -->
+<div class="blog-tags margin-bottom-20">
+  <h2>Tags</h2>
+  
+
+</div>
+<!-- END BLOG TAGS -->
+
+
+<!-- BEGIN FEATURED POSTS -->                            
+<h2>Featured Posts</h2>
+<div class="recent-news margin-bottom-10">
+  
     
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+<!-- END FEATURED POSTS -->                            
+
+</div>
+</div>
+
   </section>
-
 </div>
-
-</div>
-
-  </div>
-  </div>
-
-
 
     <!-- BEGIN PRE-FOOTER -->
     <div class="pre-footer">

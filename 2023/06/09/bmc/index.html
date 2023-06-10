@@ -7,18 +7,28 @@
 <head>
   <meta charset="utf-8">
   
-  <title>rjw&#39;s blog</title>
+  <title>bmc | rjw&#39;s blog</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="rjw&#39;s blog">
-<meta property="og:url" content="http://example.com/page/2/index.html">
+  <meta name="description" content="限界模型检验抽象格局与抽象可达图抽象格局 抽象格局 (abstract configuration) 是一个有序对 (l, φ)，其中l ∈ Loc 是程序位置，φ 是定义在程序变量上的逻辑公式。  为了与抽象格局相区分，称前面定义的格局 (l, s) 为具体格局(concrete configuration)。 抽象格局 (l, φ) 对应满足 φ 的具体格局的集合，即  {(l, s) | s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bmc">
+<meta property="og:url" content="http://example.com/2023/06/09/bmc/index.html">
 <meta property="og:site_name" content="rjw&#39;s blog">
+<meta property="og:description" content="限界模型检验抽象格局与抽象可达图抽象格局 抽象格局 (abstract configuration) 是一个有序对 (l, φ)，其中l ∈ Loc 是程序位置，φ 是定义在程序变量上的逻辑公式。  为了与抽象格局相区分，称前面定义的格局 (l, s) 为具体格局(concrete configuration)。 抽象格局 (l, φ) 对应满足 φ 的具体格局的集合，即  {(l, s) | s">
 <meta property="og:locale">
+<meta property="og:image" content="http://example.com/2023/06/09/bmc/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20211440.png">
+<meta property="og:image" content="http://example.com/2023/06/09/bmc/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20211513.png">
+<meta property="og:image" content="http://example.com/2023/06/09/bmc/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20212305.png">
+<meta property="og:image" content="http://example.com/2023/06/09/bmc/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20212350.png">
+<meta property="og:image" content="http://example.com/2023/06/09/bmc/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20220027.png">
+<meta property="article:published_time" content="2023-06-09T13:01:11.000Z">
+<meta property="article:modified_time" content="2023-06-09T14:00:58.707Z">
 <meta property="article:author" content="JiaWei Ren">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/06/09/bmc/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20211440.png">
   
     <link rel="alternative" href="/atom.xml" title="rjw&#39;s blog" type="application/atom+xml">
   
@@ -153,159 +163,181 @@
 </div>
 <!-- Header END -->
 
-  
   <div class="container">
-    <ul class="breadcrumb">
-      <li class="active">Home</li>
-    </ul>
-  <div id="main">
+  <ul class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><a href="/archives/">Blog</a></li>
+    <li class="active">Post</li>
+  </ul>
+  <section id="main">
+    
+    <h2 itemprop="name">
+      <a class="article-title" href="/2023/06/09/bmc/">bmc</a>
+    </h2>
+
+
     <div class="row">
-
-<div class="col-xs-12 blog-posts">
-
-
-  <section class="archives-wrap">
-    <div class="archives">
-      
-	<div class="row">
-  <div class="col-md-4 col-sm-4">
-    
+<div class="col-md-9 col-sm-9 blog-posts">
+<article id="post-bmc" class="article article-type-post blog-item" itemscope itemprop="blogPost">
+  <div class="article-meta">
   </div>
-  
-    <div class="col-xs-12">
-  
+  <div class="article-inner">
     
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2023/06/01/basic-concept/">基本概念</a>
-    </h2>
+    
+    <header class="article-header">
+      <ul class="blog-info">
+	<li><i class="fa fa-user"></i> Anonymous</li>
+	<li><i class="fa fa-calendar"></i>
+	  <time datetime="2023-06-09T13:01:11.000Z" itemprop="datePublished">2023/06/09</time>
 
+	</li>
+	<li class="hidden-xs"><i class="fa fa-comments"></i>
+	  <a href="http://example.com/2023/06/09/bmc/#disqus_thread" class="article-comment-link">Comments</a>
+	</li>
+	<li class="hidden-xs"><i class="fa fa-tags"></i> 
+	  
 
-    <ul class="blog-info">
-      <li>
-      	<i class="fa fa-calendar"></i> 
-        <time datetime="2023-06-01T11:45:01.000Z" itemprop="datePublished">2023/06/01</time>
-
-      </li>
-      <li><i class="fa fa-comments"></i>
-        <a href="http://example.com/2023/06/01/basic-concept/#disqus_thread" class="article-comment-link">Comments</a>
-      </li>
-      <li>
-	<i class="fa fa-tags"></i>
-	
-
-      </li>
-    </ul>
-    <div class="blog-item">
+	</li>
+      </ul>
       
-	软件分析基本概念
+  <div class="article-category">
+    
+    Category: 
+    
+    Categories:
+    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/">软件分析</a>
+  </div>
+  <br>
+
+
+    </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="限界模型检验"><a href="#限界模型检验" class="headerlink" title="限界模型检验"></a>限界模型检验</h1><h2 id="抽象格局与抽象可达图"><a href="#抽象格局与抽象可达图" class="headerlink" title="抽象格局与抽象可达图"></a>抽象格局与抽象可达图</h2><h3 id="抽象格局"><a href="#抽象格局" class="headerlink" title="抽象格局"></a>抽象格局</h3><blockquote>
+<p>抽象格局 (abstract configuration) 是一个有序对 (l, φ)，其中l ∈ Loc 是程序位置，φ 是定义在程序变量上的逻辑公式。</p>
+</blockquote>
+<p>为了与抽象格局相区分，称前面定义的格局 (l, s) 为具体格局(concrete configuration)。</p>
+<p>抽象格局 (l, φ) 对应满足 φ 的具体格局的集合，即</p>
+<script type="math/tex; mode=display">
+{(l, s) | s |= φ}</script><p>分别记 $C, C^α, C_R 和 C^α_R$ 为程序中具体格局、抽象格局、可达具体格局和可达抽象格局的集合。</p>
+<h3 id="抽象执行"><a href="#抽象执行" class="headerlink" title="抽象执行"></a>抽象执行</h3><blockquote>
+<p>抽象执行（abstract execution）是满足下列条件的抽象格局序列<br>(l0, φ0), . . . ,(ln, φn)：存在一个语句序列 st1, . . . , stn，使得对任意<br>i ∈ {0, . . . , n − 1} 下列条件都成立：</p>
+<ul>
+<li>$(l_i<br>, st_i<br>, l_{i+1}) ∈ ∆$</li>
+<li>$sp(φ_i<br>, st) ⇒ φ_{i+1}$</li>
+</ul>
+</blockquote>
+<h3 id="抽象可达图"><a href="#抽象可达图" class="headerlink" title="抽象可达图"></a>抽象可达图</h3><img src="/2023/06/09/bmc/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20211440.png" class="">
+<h3 id="精确抽象可达图"><a href="#精确抽象可达图" class="headerlink" title="精确抽象可达图"></a>精确抽象可达图</h3><img src="/2023/06/09/bmc/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20211513.png" class="">
+<h3 id="初始抽象格局与错误抽象格局"><a href="#初始抽象格局与错误抽象格局" class="headerlink" title="初始抽象格局与错误抽象格局"></a>初始抽象格局与错误抽象格局</h3><p>一个抽象格局 (l, φ) 称为</p>
+<ul>
+<li>初始抽象格局，如果 $l = l_{in} 且 φ ⇔ φ_{pre}$</li>
+<li>错误抽象格局，如果 $ l = l_{ex} 且 φ !⇒ φ_{post}$</li>
+</ul>
+<h3 id="基于精确抽象可达图的正确性验证"><a href="#基于精确抽象可达图的正确性验证" class="headerlink" title="基于精确抽象可达图的正确性验证"></a><strong>基于精确抽象可达图的正确性验证</strong></h3><p>给定程序 P 和规约 ($φ_{pre}, φ_{post}$)，程序满足规约的充要条件是程序的精确抽象可达图中不含错误抽象格局。</p>
+<h2 id="验证算法"><a href="#验证算法" class="headerlink" title="验证算法"></a>验证算法</h2><h3 id="可达图构造算法"><a href="#可达图构造算法" class="headerlink" title="可达图构造算法"></a>可达图构造算法</h3><img src="/2023/06/09/bmc/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20212305.png" class="">
+<ol>
+<li>先初始化初始格局，同时初始化一个集合记录还未访问过的格局</li>
+<li>从还未访问过的格局中选择一个，遍历其在cfa中可能的下一步，更新可达格局集合和边集</li>
+<li>重复上一步直至没有未被访问的格局</li>
+</ol>
+<h3 id="精确可达图构造算法"><a href="#精确可达图构造算法" class="headerlink" title="精确可达图构造算法"></a>精确可达图构造算法</h3><img src="/2023/06/09/bmc/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20212350.png" class="">
+<h3 id="限界模型检验算法"><a href="#限界模型检验算法" class="headerlink" title="限界模型检验算法"></a>限界模型检验算法</h3><img src="/2023/06/09/bmc/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20220027.png" class="">
+
       
     </div>
-    <br>
-    <br>
-    <a href="http://example.com/2023/06/01/basic-concept/" class="more">Read more <i class="icon-angle-right"></i></a>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/06/09/strongest-postcondition/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">strongest-postcondition</div>
+    </a>
+  
+</nav>
+
+  
+  <br>
+</article>
+
+
+
+
+</div>
+<div class="col-md-3 col-sm-3 blog-sidebar">
+  <!-- CATEGORIES START -->
+<h2 class="no-top-space">Categories</h2>
+
+<div class="widget-wrap">
+  <div class="widget">
+    <ul class="nav sidebar-categories margin-bottom-40">
+      
+	<li>
+	  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/">软件分析 (12)</a>
+	</li>
+      
+	<li>
+	  <a href="/categories/%E4%B8%80%E9%98%B6%E7%90%86%E8%AE%BA/">一阶理论 (1)</a>
+	</li>
+      
+    </ul>
   </div>
 </div>
-<hr class="blog-post-sep">
 
-      
-	<div class="row">
-  <div class="col-md-4 col-sm-4">
-    
-  </div>
+
+<!-- CATEGORIES END -->
+
+<!-- BEGIN BLOG TAGS -->
+<div class="blog-tags margin-bottom-20">
+  <h2>Tags</h2>
   
-    <div class="col-xs-12">
-  
-    
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2023/06/01/first-order-logic/">一阶逻辑</a>
-    </h2>
 
-
-    <ul class="blog-info">
-      <li>
-      	<i class="fa fa-calendar"></i> 
-        <time datetime="2023-06-01T11:45:01.000Z" itemprop="datePublished">2023/06/01</time>
-
-      </li>
-      <li><i class="fa fa-comments"></i>
-        <a href="http://example.com/2023/06/01/first-order-logic/#disqus_thread" class="article-comment-link">Comments</a>
-      </li>
-      <li>
-	<i class="fa fa-tags"></i>
-	
-
-      </li>
-    </ul>
-    <div class="blog-item">
-      
-	一阶逻辑
-      
-    </div>
-    <br>
-    <br>
-    <a href="http://example.com/2023/06/01/first-order-logic/" class="more">Read more <i class="icon-angle-right"></i></a>
-  </div>
 </div>
-<hr class="blog-post-sep">
+<!-- END BLOG TAGS -->
 
-      
-	<div class="row">
-  <div class="col-md-4 col-sm-4">
-    
-  </div>
-  
-    <div class="col-xs-12">
+
+<!-- BEGIN FEATURED POSTS -->                            
+<h2>Featured Posts</h2>
+<div class="recent-news margin-bottom-10">
   
     
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2023/06/01/propositional-logic/">命题逻辑</a>
-    </h2>
-
-
-    <ul class="blog-info">
-      <li>
-      	<i class="fa fa-calendar"></i> 
-        <time datetime="2023-06-01T11:45:01.000Z" itemprop="datePublished">2023/06/01</time>
-
-      </li>
-      <li><i class="fa fa-comments"></i>
-        <a href="http://example.com/2023/06/01/propositional-logic/#disqus_thread" class="article-comment-link">Comments</a>
-      </li>
-      <li>
-	<i class="fa fa-tags"></i>
-	
-
-      </li>
-    </ul>
-    <div class="blog-item">
-      
-	命题逻辑
-      
-    </div>
-    <br>
-    <br>
-    <a href="http://example.com/2023/06/01/propositional-logic/" class="more">Read more <i class="icon-angle-right"></i></a>
-  </div>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
 </div>
-<hr class="blog-post-sep">
+<!-- END FEATURED POSTS -->                            
 
-      
-    </div>
-    
-      <div id="page-nav" class="pagination">
-	<a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-      </div>
-    
+</div>
+</div>
+
   </section>
-
 </div>
-
-</div>
-
-  </div>
-  </div>
-
-
 
     <!-- BEGIN PRE-FOOTER -->
     <div class="pre-footer">
