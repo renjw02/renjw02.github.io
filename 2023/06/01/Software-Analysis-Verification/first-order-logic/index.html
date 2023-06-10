@@ -7,29 +7,34 @@
 <head>
   <meta charset="utf-8">
   
-  <title>一阶理论 | rjw&#39;s blog</title>
+  <title>一阶逻辑 | rjw&#39;s blog</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <meta name="description" content="一阶理论命题逻辑可判定，但表达能力不够; 一阶逻辑的表达能力足够，但却不可判定。 一阶理论:  表达能力比一阶逻辑弱  许多一阶理论是可判定的   定义 非逻辑符号包括函数、谓词、常元等。  一些基本概念在理论 T 下的扩展定义： T -解释（T -interpretation）：满足 T 中所有公理的解释 M 称T -解释，即 ∀A ∈ A. [[A]]M &#x3D; true。 T -可满足（T -s">
+  <meta name="description" content="一阶逻辑语法符号集 构造规则  自由变元和约束变元 量词辖域的确定：按匹配到的最大公式为它的辖域。 语义解释 解释函数为常元，函数和谓词指定了取值，变元应根据赋值ρ取值 对项求值 对公式求值 可满足性 语义蕴涵 证明系统使用相继式证明系统$S_{FOL}$，对于不含量词的公式，可按命题逻辑的规则处理 推理规则含量词：  $S_{FOL}$的性质 一阶逻辑的半可判定性一阶逻辑是半可判定的（semi-">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一阶理论">
-<meta property="og:url" content="http://example.com/2023/06/01/theories/index.html">
+<meta property="og:title" content="一阶逻辑">
+<meta property="og:url" content="http://example.com/2023/06/01/Software-Analysis-Verification/first-order-logic/index.html">
 <meta property="og:site_name" content="rjw&#39;s blog">
-<meta property="og:description" content="一阶理论命题逻辑可判定，但表达能力不够; 一阶逻辑的表达能力足够，但却不可判定。 一阶理论:  表达能力比一阶逻辑弱  许多一阶理论是可判定的   定义 非逻辑符号包括函数、谓词、常元等。  一些基本概念在理论 T 下的扩展定义： T -解释（T -interpretation）：满足 T 中所有公理的解释 M 称T -解释，即 ∀A ∈ A. [[A]]M &#x3D; true。 T -可满足（T -s">
+<meta property="og:description" content="一阶逻辑语法符号集 构造规则  自由变元和约束变元 量词辖域的确定：按匹配到的最大公式为它的辖域。 语义解释 解释函数为常元，函数和谓词指定了取值，变元应根据赋值ρ取值 对项求值 对公式求值 可满足性 语义蕴涵 证明系统使用相继式证明系统$S_{FOL}$，对于不含量词的公式，可按命题逻辑的规则处理 推理规则含量词：  $S_{FOL}$的性质 一阶逻辑的半可判定性一阶逻辑是半可判定的（semi-">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/2023/06/01/theories/2023-06-01%20212044.png">
-<meta property="og:image" content="http://example.com/2023/06/01/theories/2023-06-01%20213521.png">
-<meta property="og:image" content="e:\blog\myBlog\source\_posts\theories\2023-06-01 215956.png">
-<meta property="og:image" content="e:\blog\myBlog\source\_posts\theories\2023-06-01 220546.png">
-<meta property="og:image" content="e:\blog\myBlog\source\_posts\theories\2023-06-01 220901.png">
-<meta property="og:image" content="e:\blog\myBlog\source\_posts\theories\2023-06-01 221059.png">
-<meta property="article:published_time" content="2023-06-01T13:08:58.000Z">
-<meta property="article:modified_time" content="2023-06-10T12:40:11.151Z">
+<meta property="og:image" content="http://example.com/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601171020530.png">
+<meta property="og:image" content="http://example.com/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601171403353.png">
+<meta property="og:image" content="http://example.com/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601171418350.png">
+<meta property="og:image" content="http://example.com/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601171517534.png">
+<meta property="og:image" content="http://example.com/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601171638108.png">
+<meta property="og:image" content="http://example.com/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601172154058.png">
+<meta property="og:image" content="http://example.com/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601172531775.png">
+<meta property="og:image" content="http://example.com/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601173139107.png">
+<meta property="og:image" content="http://example.com/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601173203138.png">
+<meta property="og:image" content="http://example.com/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601173511586.png">
+<meta property="og:image" content="http://example.com/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601173747934.png">
+<meta property="article:published_time" content="2023-06-01T11:45:01.000Z">
+<meta property="article:modified_time" content="2023-06-10T12:26:29.168Z">
 <meta property="article:author" content="JiaWei Ren">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/06/01/theories/2023-06-01%20212044.png">
+<meta name="twitter:image" content="http://example.com/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601171020530.png">
   
     <link rel="alternative" href="/atom.xml" title="rjw&#39;s blog" type="application/atom+xml">
   
@@ -173,13 +178,13 @@
   <section id="main">
     
     <h2 itemprop="name">
-      <a class="article-title" href="/2023/06/01/theories/">一阶理论</a>
+      <a class="article-title" href="/2023/06/01/Software-Analysis-Verification/first-order-logic/">一阶逻辑</a>
     </h2>
 
 
     <div class="row">
 <div class="col-md-9 col-sm-9 blog-posts">
-<article id="post-theories" class="article article-type-post blog-item" itemscope itemprop="blogPost">
+<article id="post-Software-Analysis-Verification/first-order-logic" class="article article-type-post blog-item" itemscope itemprop="blogPost">
   <div class="article-meta">
   </div>
   <div class="article-inner">
@@ -189,11 +194,11 @@
       <ul class="blog-info">
 	<li><i class="fa fa-user"></i> Anonymous</li>
 	<li><i class="fa fa-calendar"></i>
-	  <time datetime="2023-06-01T13:08:58.000Z" itemprop="datePublished">2023/06/01</time>
+	  <time datetime="2023-06-01T11:45:01.000Z" itemprop="datePublished">2023/06/01</time>
 
 	</li>
 	<li class="hidden-xs"><i class="fa fa-comments"></i>
-	  <a href="http://example.com/2023/06/01/theories/#disqus_thread" class="article-comment-link">Comments</a>
+	  <a href="http://example.com/2023/06/01/Software-Analysis-Verification/first-order-logic/#disqus_thread" class="article-comment-link">Comments</a>
 	</li>
 	<li class="hidden-xs"><i class="fa fa-tags"></i> 
 	  
@@ -215,63 +220,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="一阶理论"><a href="#一阶理论" class="headerlink" title="一阶理论"></a>一阶理论</h1><p>命题逻辑可判定，但表达能力不够; 一阶逻辑的表达能力足够，但却不可判定。</p>
-<p>一阶理论:</p>
+        <h1 id="一阶逻辑"><a href="#一阶逻辑" class="headerlink" title="一阶逻辑"></a>一阶逻辑</h1><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="符号集"><a href="#符号集" class="headerlink" title="符号集"></a>符号集</h3><img src="/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601171020530.png" class="" title="label">
+<h3 id="构造规则"><a href="#构造规则" class="headerlink" title="构造规则"></a>构造规则</h3><img src="/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601171403353.png" class="" title="label">
+<img src="/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601171418350.png" class="" title="label">
+<h3 id="自由变元和约束变元"><a href="#自由变元和约束变元" class="headerlink" title="自由变元和约束变元"></a>自由变元和约束变元</h3><img src="/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601171517534.png" class="" title="label">
+<p>量词辖域的确定：按匹配到的最大公式为它的辖域。</p>
+<h2 id="语义"><a href="#语义" class="headerlink" title="语义"></a>语义</h2><h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><img src="/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601171638108.png" class="" title="label">
+<p>解释函数为<strong>常元</strong>，<strong>函数</strong>和<strong>谓词</strong>指定了取值，变元应根据赋值ρ取值</p>
+<h3 id="对项求值"><a href="#对项求值" class="headerlink" title="对项求值"></a>对项求值</h3><img src="/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601172154058.png" class="" title="label">
+<h3 id="对公式求值"><a href="#对公式求值" class="headerlink" title="对公式求值"></a>对公式求值</h3><img src="/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601172531775.png" class="" title="label">
+<h3 id="可满足性"><a href="#可满足性" class="headerlink" title="可满足性"></a>可满足性</h3><img src="/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601173139107.png" class="" title="label">
+<h3 id="语义蕴涵"><a href="#语义蕴涵" class="headerlink" title="语义蕴涵"></a>语义蕴涵</h3><img src="/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601173203138.png" class="" title="label">
+<h2 id="证明系统"><a href="#证明系统" class="headerlink" title="证明系统"></a>证明系统</h2><p>使用相继式证明系统$S_{FOL}$，对于不含量词的公式，可按命题逻辑的规则处理</p>
+<h3 id="推理规则"><a href="#推理规则" class="headerlink" title="推理规则"></a>推理规则</h3><p>含量词：</p>
+<img src="/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601173511586.png" class="" title="label">
+<h3 id="S-FOL-的性质"><a href="#S-FOL-的性质" class="headerlink" title="$S_{FOL}$的性质"></a>$S_{FOL}$的性质</h3><img src="/2023/06/01/Software-Analysis-Verification/first-order-logic/image-20230601173747934.png" class="" title="label">
+<h3 id="一阶逻辑的半可判定性"><a href="#一阶逻辑的半可判定性" class="headerlink" title="一阶逻辑的半可判定性"></a>一阶逻辑的半可判定性</h3><p>一阶逻辑是<strong>半可判定的（<em>semi-decidable</em>）</strong>, 即判定一阶逻辑公式是否有效的算法</p>
 <ul>
-<li><p>表达能力比一阶逻辑弱</p>
-</li>
-<li><p>许多一阶理论是可判定的</p>
-</li>
+<li>只有在该公式是有效式的前提下，才能保证在有限时间内终止并给出正确结果；</li>
+<li>否则，可能永远不终止。</li>
 </ul>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><img src="/2023/06/01/theories/2023-06-01%20212044.png" class="" title="definition">
-<p>非逻辑符号包括函数、谓词、常元等。</p>
-<blockquote>
-<p>一些基本概念在理论 <em>T</em> 下的扩展定义：</p>
-<p><em>T</em> -解释（<em>T</em> -interpretation）：满足 <em>T</em> 中所有公理的解释 <em>M</em> 称<em>T</em> -解释，即 <em>∀A</em> <em>∈ A.</em> [[<em>A</em>]]<em>M</em> = <em>true</em>。</p>
-<p><em>T</em> -可满足（<em>T</em> -satisfaction）：如果存在一个 <em>T</em> -解释 <em>M</em> 和一个赋值 <em>ρ</em>，使得 [[<em>φ</em>]]<em>M,ρ</em> 为真，则称 <em>φ</em> 是 <em>T</em> -可满足的。</p>
-<p><em>T</em> -有效式（<em>T</em> -validity）：如果对任意 <em>T</em> -解释 <em>M</em> 和任意赋值 <em>ρ</em>，[[<em>φ</em>]]<em>M,ρ</em> 都为真，则称 <em>φ</em> 是 <em>T</em> -有效式，记作 <em>T |</em>= <em>φ</em>。</p>
-<p><em>T</em> -语义蕴含（<em>T</em> -entailment）：如果 <em>φ</em> <em>→</em> <em>ψ</em> 是 <em>T</em> -有效式，则称<em>φ</em> <em>T</em> -语义蕴含 <em>ψ</em>，也称 <em>ψ</em> 是 <em>φ</em> 在理论 <em>T</em> 下的逻辑推论。</p>
-</blockquote>
-<h3 id="可判定性"><a href="#可判定性" class="headerlink" title="可判定性"></a>可判定性</h3><p>如果存在一个算法，能够在有限时间内正确地判定任意给定的 Σ-公式的 <em>T</em> -有效性，就称该理论是可判定的。</p>
-<p><strong>一阶理论片段（<em>fragment</em>）</strong>：对 Σ-公式的语法进一步引入一定限制，如不允许量词出现。</p>
-<p>对于许多不可判定的一阶理论，可以通过对其语法进行限制得到可判定的理论片段。</p>
-<h2 id="等式理论"><a href="#等式理论" class="headerlink" title="等式理论"></a>等式理论</h2><img src="/2023/06/01/theories/2023-06-01%20213521.png" class="">
-<blockquote>
-<p>“=”的含义由 AE 中的公理定义：</p>
-<ol>
-<li>自反性：∀x. x = x</li>
-<li>对称性：∀x, y. x = y → y = x</li>
-<li>传递性：∀x, y, z. x = y ∧ y = z → x = z</li>
-<li>函数同余：∀x, y. ($\Lambda^n_{i=1}$xi = yi) → f(x) = f(y)</li>
-<li>谓词同余：∀x, y. ($\Lambda^n_{i=1}$xi = yi) → p(x) ↔ p(y)</li>
-</ol>
-</blockquote>
-<h3 id="等式和未解释函数理论"><a href="#等式和未解释函数理论" class="headerlink" title="等式和未解释函数理论"></a>等式和未解释函数理论</h3><p><img src="E:\blog\myBlog\source\_posts\theories\2023-06-01 215956.png" alt=""></p>
-<p>例：</p>
-<script type="math/tex; mode=display">
-x = y → (p(x) ↔ p(y))
-\\变换后：
-x = y → ((fp(x) = •) ↔ (fp(y) = •))</script><h3 id="等式理论性质"><a href="#等式理论性质" class="headerlink" title="等式理论性质"></a>等式理论性质</h3><p>等式理论是不可判定的</p>
-<p>等式理论的无量词片段可判定</p>
-<h2 id="算术理论"><a href="#算术理论" class="headerlink" title="算术理论"></a>算术理论</h2><h3 id="皮亚诺算术"><a href="#皮亚诺算术" class="headerlink" title="皮亚诺算术"></a>皮亚诺算术</h3><p><img src="E:\blog\myBlog\source\_posts\theories\2023-06-01 220546.png" alt=""></p>
-<blockquote>
-<p>$T_{PA}$ 的语法糖：</p>
-<ul>
-<li><p>任意自然数可以表示为多个 1 相加</p>
-</li>
-<li><p>关系式可以通过引入一个额外的自然数变量转换为等式</p>
-</li>
-<li><p>严格关系式再增加一个该额外变量不等于 0 的约束</p>
-</li>
-</ul>
-</blockquote>
-<p><strong>$T_{PA}$的论域是自然数</strong></p>
-<p><em>$T_{PA}$</em>是不可判定的</p>
-<p>$T_{PA}$的无量词片段还是不可判定的</p>
-<h3 id="Presburger-算术"><a href="#Presburger-算术" class="headerlink" title="Presburger 算术"></a><strong>Presburger</strong> <strong>算术</strong></h3><p><img src="E:\blog\myBlog\source\_posts\theories\2023-06-01 220901.png" alt=""></p>
-<p><em>$T_{N}$</em>是可判定的</p>
-<p>$T_{N}$的无量词片段是可判定的</p>
-<h3 id="线性整数算术理论"><a href="#线性整数算术理论" class="headerlink" title="线性整数算术理论"></a><strong>线性整数算术理论</strong></h3><p><img src="E:\blog\myBlog\source\_posts\theories\2023-06-01 221059.png" alt=""></p>
 
       
     </div>
@@ -280,19 +248,19 @@ x = y → ((fp(x) = •) ↔ (fp(y) = •))</script><h3 id="等式理论性质">
     
 <nav id="article-nav">
   
-    <a href="/2023/06/06/IMP-language/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/06/01/Software-Analysis-Verification/basic-concept/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          IMP language
+          基本概念
         
       </div>
     </a>
   
   
-    <a href="/2023/06/01/basic-concept/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2023/06/01/Software-Analysis-Verification/propositional-logic/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">基本概念</div>
+      <div class="article-nav-title">命题逻辑</div>
     </a>
   
 </nav>
@@ -515,6 +483,23 @@ x = y → ((fp(x) = •) ↔ (fp(y) = •))</script><h3 id="等式理论性质">
 
 
 <!-- END INTEGRATIONS -->
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 </html>

@@ -7,25 +7,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>termination | rjw&#39;s blog</title>
+  <title>predicate-transformation | rjw&#39;s blog</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <meta name="description" content="程序终止性在前面讨论程序正确性时，都限定在程序终止的情况下进行讨论，这种正确性称程序的部分正确性  程序的完全正确性 (total correctness)，记为  [φ] \ st\  [ψ]表示：  从满足 φ 的状态执行语句 st， 一定终止， 且结束时的状态满足 ψ。   完全正确性 &#x3D; 部分正确性 + 终止性 程序终止性（termination）：程序是否对所有输入都停机 程序终止性问题">
+  <meta name="description" content="谓词变换谓词变换（Predicate Transformer）：给定一条断言和一条程序语句，通过变换得到另一条断言。 常见的谓词变换有：  最弱前置条件（Weakest Precondition）wp(st, ψ)：假设语句执行后满足 ψ，执行语句前必须满足的条件。  {wp(st, ψ)} st {ψ} 是有效式，即 wp(st, ψ) 是一个能够让 ψ 成立的前置条件，且  若存在 φ 使得">
 <meta property="og:type" content="article">
-<meta property="og:title" content="termination">
-<meta property="og:url" content="http://example.com/2023/06/08/termination/index.html">
+<meta property="og:title" content="predicate-transformation">
+<meta property="og:url" content="http://example.com/2023/06/07/Software-Analysis-Verification/predicate-transformation/index.html">
 <meta property="og:site_name" content="rjw&#39;s blog">
-<meta property="og:description" content="程序终止性在前面讨论程序正确性时，都限定在程序终止的情况下进行讨论，这种正确性称程序的部分正确性  程序的完全正确性 (total correctness)，记为  [φ] \ st\  [ψ]表示：  从满足 φ 的状态执行语句 st， 一定终止， 且结束时的状态满足 ψ。   完全正确性 &#x3D; 部分正确性 + 终止性 程序终止性（termination）：程序是否对所有输入都停机 程序终止性问题">
+<meta property="og:description" content="谓词变换谓词变换（Predicate Transformer）：给定一条断言和一条程序语句，通过变换得到另一条断言。 常见的谓词变换有：  最弱前置条件（Weakest Precondition）wp(st, ψ)：假设语句执行后满足 ψ，执行语句前必须满足的条件。  {wp(st, ψ)} st {ψ} 是有效式，即 wp(st, ψ) 是一个能够让 ψ 成立的前置条件，且  若存在 φ 使得">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/2023/06/08/termination/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-08%20194516.png">
-<meta property="og:image" content="http://example.com/2023/06/08/termination/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-08%20200702.png">
-<meta property="article:published_time" content="2023-06-08T11:34:08.000Z">
-<meta property="article:modified_time" content="2023-06-08T12:19:03.677Z">
+<meta property="og:image" content="http://example.com/2023/06/07/Software-Analysis-Verification/predicate-transformation/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20223042.png">
+<meta property="og:image" content="http://example.com/2023/06/07/Software-Analysis-Verification/predicate-transformation/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20223515.png">
+<meta property="og:image" content="http://example.com/2023/06/07/Software-Analysis-Verification/predicate-transformation/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20225209.png">
+<meta property="article:published_time" content="2023-06-07T14:24:57.000Z">
+<meta property="article:modified_time" content="2023-06-07T14:59:16.668Z">
 <meta property="article:author" content="JiaWei Ren">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/06/08/termination/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-08%20194516.png">
+<meta name="twitter:image" content="http://example.com/2023/06/07/Software-Analysis-Verification/predicate-transformation/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20223042.png">
   
     <link rel="alternative" href="/atom.xml" title="rjw&#39;s blog" type="application/atom+xml">
   
@@ -169,13 +170,13 @@
   <section id="main">
     
     <h2 itemprop="name">
-      <a class="article-title" href="/2023/06/08/termination/">termination</a>
+      <a class="article-title" href="/2023/06/07/Software-Analysis-Verification/predicate-transformation/">predicate-transformation</a>
     </h2>
 
 
     <div class="row">
 <div class="col-md-9 col-sm-9 blog-posts">
-<article id="post-termination" class="article article-type-post blog-item" itemscope itemprop="blogPost">
+<article id="post-Software-Analysis-Verification/predicate-transformation" class="article article-type-post blog-item" itemscope itemprop="blogPost">
   <div class="article-meta">
   </div>
   <div class="article-inner">
@@ -185,11 +186,11 @@
       <ul class="blog-info">
 	<li><i class="fa fa-user"></i> Anonymous</li>
 	<li><i class="fa fa-calendar"></i>
-	  <time datetime="2023-06-08T11:34:08.000Z" itemprop="datePublished">2023/06/08</time>
+	  <time datetime="2023-06-07T14:24:57.000Z" itemprop="datePublished">2023/06/07</time>
 
 	</li>
 	<li class="hidden-xs"><i class="fa fa-comments"></i>
-	  <a href="http://example.com/2023/06/08/termination/#disqus_thread" class="article-comment-link">Comments</a>
+	  <a href="http://example.com/2023/06/07/Software-Analysis-Verification/predicate-transformation/#disqus_thread" class="article-comment-link">Comments</a>
 	</li>
 	<li class="hidden-xs"><i class="fa fa-tags"></i> 
 	  
@@ -211,53 +212,71 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="程序终止性"><a href="#程序终止性" class="headerlink" title="程序终止性"></a>程序终止性</h1><p>在前面讨论程序正确性时，都限定在程序终止的情况下进行讨论，这种正确性称程序的部分正确性</p>
-<blockquote>
-<p>程序的完全正确性 (total correctness)，记为</p>
-<script type="math/tex; mode=display">
-[φ] \ st\  [ψ]</script><p>表示：</p>
+        <h1 id="谓词变换"><a href="#谓词变换" class="headerlink" title="谓词变换"></a>谓词变换</h1><p>谓词变换（Predicate Transformer）：给定一条断言和一条程序语句，通过变换得到另一条断言。</p>
+<p>常见的谓词变换有：</p>
 <ul>
-<li>从满足 φ 的状态执行语句 st，</li>
-<li>一定终止，</li>
-<li>且结束时的状态满足 ψ。</li>
-</ul>
-</blockquote>
-<p><strong>完全正确性 = 部分正确性 + 终止性</strong></p>
-<p>程序终止性（termination）：程序是否对所有输入都停机</p>
-<p>程序终止性问题是<strong>不可判定问题</strong> </p>
-<h2 id="良基关系"><a href="#良基关系" class="headerlink" title="良基关系"></a>良基关系</h2><blockquote>
-<p>集合 S 上的二元关系 ≺ 称为良基关系（well-founded relation），当且仅当：</p>
-<ul>
-<li>集合 S 中不存在无穷序列 $s_1$, $s_2$, . . .，使得对于任意的 i &gt; 0 有<br>$s_{i+1} ≺ s_i$；</li>
-<li>即集合 S 中不存在关于 ≺ 的无穷下降序列</li>
-</ul>
-</blockquote>
-<h3 id="字典序良基关系"><a href="#字典序良基关系" class="headerlink" title="字典序良基关系"></a>字典序良基关系</h3><img src="/2023/06/08/termination/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-08%20194516.png" class="">
-<h2 id="秩函数"><a href="#秩函数" class="headerlink" title="秩函数"></a>秩函数</h2><blockquote>
-<p>设 ≺ 是定义在集合 W 上的良基关系。考虑循环 while (p){st}，设S 是程序中所有可达状态的集合，如果存在一个从 S 到 W 的映射函数 δ，使得对程序经过循环头的任意相邻两次状态 s 和 s′，<br>$(δ(s^<br>′<br>), δ(s)) ∈ ≺ $成立，则称 δ 为该循环的秩函数（rankingfunction）。</p>
-</blockquote>
-<p>秩函数也被称为循环变式，其（1）值有下界；（2）循环每迭代一次，其值严格下降，且下降幅度不会趋向于无穷小</p>
-<p><strong>程序终止性</strong>：如果循环有秩函数，则循环是终止的。</p>
-<p>如果程序中每个循环都有秩函数，则程序是终止的。</p>
-<h3 id="证明程序终止性"><a href="#证明程序终止性" class="headerlink" title="证明程序终止性"></a>证明程序终止性</h3><p>证明程序终止性的基本步骤：</p>
+<li><p>最弱前置条件（Weakest Precondition）wp(st, ψ)：假设语句执行后满足 ψ，执行语句前必须满足的条件。</p>
 <ol>
-<li><p>确定集合 <em>W</em> 以及一个定义在 <em>W</em> 上的良基关系 <em>≺</em></p>
-<ul>
-<li>例如，N 和定义在 N 上的小于关系 <em>&lt;</em></li>
-<li>必要时，引入 (N<em>, &lt;</em>) 的 <em>n</em> 元组，基于其字典序良基关系来寻找秩函数。</li>
-</ul>
+<li><p>{wp(st, ψ)} st {ψ} 是有效式，即 wp(st, ψ) 是一个能够让 ψ 成<br>立的前置条件，且</p>
 </li>
-<li><p>确定一个从程序状态集到 <em>W</em> 的映射函数 <em>δ</em> : <em>S →</em> <em>W</em></p>
-</li>
-<li><p>证明 <em>δ</em> 关于 <em>≺</em> 在每个基本路径上都是下降的。</p>
+<li><p>若存在 φ 使得 {φ} st {ψ} 是有效式，则 φ ⇒ wp(st, ψ)，即<br>wp(st, ψ) 是所有此类前置条件中最弱的。</p>
 </li>
 </ol>
-<p><strong>常用 (Z, &lt;N)</strong>寻找秩函数</p>
-<h3 id="标注秩函数"><a href="#标注秩函数" class="headerlink" title="标注秩函数"></a>标注秩函数</h3><p>在基本路径中使用 ↓ 标注秩函数；</p>
-<p>所有循环都需要标注秩函数；<br>例如：<br>↓ i<br>↓ u − l + 1<br>↓ (i + 1, j − 1)</p>
-<p><strong>秩函数的标注是为了确保循环能终止，递归也是同理</strong></p>
-<p><strong>因此循环的基本路径的前后都有秩函数；递归不一定，只有在子递归处才有后面的秩函数</strong></p>
-<h3 id="验证条件"><a href="#验证条件" class="headerlink" title="验证条件"></a>验证条件</h3><img src="/2023/06/08/termination/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-08%20200702.png" class="" title="屏幕截图 2023-06-08 200702">
+</li>
+<li><p>最强后置条件 （Strongest Postcondition）sp(φ, st)：假设语句执行前满足 φ，执行语句后必定满足的条件。</p>
+<ol>
+<li><p>{φ} st {sp(φ, st)} 是有效式，且</p>
+</li>
+<li><p>若存在 ψ 使得 {φ} st {ψ} 是有效式，则 sp(φ, st) ⇒ ψ，即<br>sp(φ, st) 是所有此类后置条件中最强的。</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="最弱前置条件"><a href="#最弱前置条件" class="headerlink" title="最弱前置条件"></a>最弱前置条件</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><img src="/2023/06/07/Software-Analysis-Verification/predicate-transformation/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20223042.png" class="">
+<h3 id="验证条件"><a href="#验证条件" class="headerlink" title="验证条件"></a>验证条件</h3><p>给定程序 <em>st</em> 和规约 (<em>φ, ψ</em>)，验证条件 (verification conditions) 是一组一阶逻辑公式，满足：</p>
+<p><strong>如果所有验证条件都是有效式，则程序满足规约</strong></p>
+<blockquote>
+<p>最弱前置条件提供了一种生成验证条件的方法：</p>
+<ol>
+<li><p>从程序规约的后置条件 <em>ψ</em> 开始</p>
+</li>
+<li><p>由后向前计算程序的最弱前置条件 <em>wp</em>(<em>st, ψ</em>)</p>
+</li>
+<li><p>验证 <em>φ</em> <em>→</em> <em>wp</em>(<em>st, ψ</em>) 是否为有效式</p>
+</li>
+</ol>
+</blockquote>
+<h3 id="最弱前置条件计算"><a href="#最弱前置条件计算" class="headerlink" title="最弱前置条件计算"></a>最弱前置条件计算</h3><img src="/2023/06/07/Software-Analysis-Verification/predicate-transformation/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20223515.png" class="">
+<blockquote>
+<p><strong>计算赋值语句的wp时可能会遇到的问题</strong></p>
+<p>当公式 φ 中存在与 x 同名的约束变元时，如何避免 φ[x → e] 发生变元捕获？<br>α-替换：在替换之前先重命名 φ 中可能导致捕获的约束变元<br><strong>更一般的替换形式</strong>是：φ[G0 → F0, · · · , Gn → Fn], 其中 Fi, Gi 也都是公式。为避免变元捕获，令</p>
+<script type="math/tex; mode=display">
+V_{free} =
+∪_
+i
+free(F_i)∪ free(G_i)</script><p>对 φ 中的每一个约束变元 x，若 $x ∈ V_{free}$，则以一个新的变元符号来重命名 x；<br>以 φ′ 表示重命名后的公式，对 φ′ 同时应用所有替换；<br>如果 Gi 和 Gj 在 φ′ 中的某处重合，并且 Gi 是 Gj 的子公式，则只应用范围较大的替换，即 Gj → Fj。</p>
+</blockquote>
+<h3 id="验证条件-1"><a href="#验证条件-1" class="headerlink" title="验证条件"></a>验证条件</h3><img src="/2023/06/07/Software-Analysis-Verification/predicate-transformation/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20225209.png" class="">
+<h3 id="基于最弱前置条件的程序验证"><a href="#基于最弱前置条件的程序验证" class="headerlink" title="基于最弱前置条件的程序验证"></a>基于最弱前置条件的程序验证</h3><blockquote>
+<ol>
+<li><p>计算 φ′ = wp(st, ψ)</p>
+</li>
+<li><p>计算 VC(st, ψ)</p>
+</li>
+<li><p>检查 <em>φ</em> <em>→</em> <em>φ</em> <em>′</em> 是否有效式</p>
+</li>
+<li><p>检查 VC(st, ψ) 中的每一个公式是否有效式</p>
+</li>
+</ol>
+</blockquote>
+<ul>
+<li><p>VC(st, ψ) 和 φ → φ′ 统称为验证条件（Verification Conditions)</p>
+</li>
+<li><p>如果所有验证条件的检查都通过，则 st |= (φ, ψ)</p>
+</li>
+<li><p>若 st |= (φ, ψ)，不一定能够通过所有验证条件的检查</p>
+</li>
+</ul>
 
       
     </div>
@@ -266,19 +285,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2023/06/08/cfa/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/06/08/Software-Analysis-Verification/procedure/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          cfa
+          procedure
         
       </div>
     </a>
   
   
-    <a href="/2023/06/08/procedure/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2023/06/07/Software-Analysis-Verification/array/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">procedure</div>
+      <div class="article-nav-title">array</div>
     </a>
   
 </nav>
@@ -501,6 +520,23 @@
 
 
 <!-- END INTEGRATIONS -->
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 </html>

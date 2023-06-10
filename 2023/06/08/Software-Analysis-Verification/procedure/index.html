@@ -7,25 +7,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>cfa | rjw&#39;s blog</title>
+  <title>procedure | rjw&#39;s blog</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <meta name="description" content="程序的自动机表示IMP扩展havoc语句在 IMP 中引入 havoc 语句，用于建模非确定性havoc 语句的语义：  [[havoc \ x]] &#x3D; \{(s, s^ ′ ) | s^ ′ &#x3D; s[x_7→ ⋆]\}其中 ⋆ 代表任意值，havoc x 即给 x 赋任意值havoc 语句的最弱前置条件：$wp(havoc \ x, ψ) &#x3D; ∀x. ψ$ 控制流自动机 控制流自动机 (cont">
+  <meta name="description" content="过程语言扩展断言断言语句的语义：  [[assert \ p]] &#x3D; \{(s, s) \ |\ [[p]]_s &#x3D; true\} ∪ \{(s, \downarrow)\ |\ [[p]]_s &#x3D; false \} 若表达式在当前状态下为真，断言成立； 若表达式在当前状态下为假，程序终止执行，并进入到一个特殊的状态，称为错误状态  过程契约1234&#x2F;*@ requires 0 &lt;&#x3D; l &amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cfa">
-<meta property="og:url" content="http://example.com/2023/06/08/cfa/index.html">
+<meta property="og:title" content="procedure">
+<meta property="og:url" content="http://example.com/2023/06/08/Software-Analysis-Verification/procedure/index.html">
 <meta property="og:site_name" content="rjw&#39;s blog">
-<meta property="og:description" content="程序的自动机表示IMP扩展havoc语句在 IMP 中引入 havoc 语句，用于建模非确定性havoc 语句的语义：  [[havoc \ x]] &#x3D; \{(s, s^ ′ ) | s^ ′ &#x3D; s[x_7→ ⋆]\}其中 ⋆ 代表任意值，havoc x 即给 x 赋任意值havoc 语句的最弱前置条件：$wp(havoc \ x, ψ) &#x3D; ∀x. ψ$ 控制流自动机 控制流自动机 (cont">
+<meta property="og:description" content="过程语言扩展断言断言语句的语义：  [[assert \ p]] &#x3D; \{(s, s) \ |\ [[p]]_s &#x3D; true\} ∪ \{(s, \downarrow)\ |\ [[p]]_s &#x3D; false \} 若表达式在当前状态下为真，断言成立； 若表达式在当前状态下为假，程序终止执行，并进入到一个特殊的状态，称为错误状态  过程契约1234&#x2F;*@ requires 0 &lt;&#x3D; l &amp;">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/2023/06/08/cfa/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20193750.png">
-<meta property="og:image" content="http://example.com/2023/06/08/cfa/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20194821.png">
-<meta property="article:published_time" content="2023-06-08T12:28:06.000Z">
-<meta property="article:modified_time" content="2023-06-09T12:07:41.060Z">
+<meta property="og:image" content="http://example.com/2023/06/08/Software-Analysis-Verification/procedure/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-08%20192654.png">
+<meta property="article:published_time" content="2023-06-08T10:59:36.000Z">
+<meta property="article:modified_time" content="2023-06-08T11:27:20.659Z">
 <meta property="article:author" content="JiaWei Ren">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/06/08/cfa/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20193750.png">
+<meta name="twitter:image" content="http://example.com/2023/06/08/Software-Analysis-Verification/procedure/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-08%20192654.png">
   
     <link rel="alternative" href="/atom.xml" title="rjw&#39;s blog" type="application/atom+xml">
   
@@ -169,13 +168,13 @@
   <section id="main">
     
     <h2 itemprop="name">
-      <a class="article-title" href="/2023/06/08/cfa/">cfa</a>
+      <a class="article-title" href="/2023/06/08/Software-Analysis-Verification/procedure/">procedure</a>
     </h2>
 
 
     <div class="row">
 <div class="col-md-9 col-sm-9 blog-posts">
-<article id="post-cfa" class="article article-type-post blog-item" itemscope itemprop="blogPost">
+<article id="post-Software-Analysis-Verification/procedure" class="article article-type-post blog-item" itemscope itemprop="blogPost">
   <div class="article-meta">
   </div>
   <div class="article-inner">
@@ -185,11 +184,11 @@
       <ul class="blog-info">
 	<li><i class="fa fa-user"></i> Anonymous</li>
 	<li><i class="fa fa-calendar"></i>
-	  <time datetime="2023-06-08T12:28:06.000Z" itemprop="datePublished">2023/06/08</time>
+	  <time datetime="2023-06-08T10:59:36.000Z" itemprop="datePublished">2023/06/08</time>
 
 	</li>
 	<li class="hidden-xs"><i class="fa fa-comments"></i>
-	  <a href="http://example.com/2023/06/08/cfa/#disqus_thread" class="article-comment-link">Comments</a>
+	  <a href="http://example.com/2023/06/08/Software-Analysis-Verification/procedure/#disqus_thread" class="article-comment-link">Comments</a>
 	</li>
 	<li class="hidden-xs"><i class="fa fa-tags"></i> 
 	  
@@ -211,52 +210,69 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="程序的自动机表示"><a href="#程序的自动机表示" class="headerlink" title="程序的自动机表示"></a>程序的自动机表示</h1><h2 id="IMP扩展havoc语句"><a href="#IMP扩展havoc语句" class="headerlink" title="IMP扩展havoc语句"></a>IMP扩展havoc语句</h2><p>在 IMP 中引入 havoc 语句，用于建模非确定性<br>havoc 语句的语义：</p>
+        <h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><h2 id="语言扩展"><a href="#语言扩展" class="headerlink" title="语言扩展"></a>语言扩展</h2><h3 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h3><p>断言语句的语义：</p>
 <script type="math/tex; mode=display">
-[[havoc \ x]] = \{(s, s^
-′
-) | s^
-′ = s[x_7→ ⋆]\}</script><p>其中 ⋆ 代表任意值，havoc x 即给 x 赋任意值<br>havoc 语句的最弱前置条件：<br>$wp(havoc \ x, ψ) = ∀x. ψ$</p>
-<h2 id="控制流自动机"><a href="#控制流自动机" class="headerlink" title="控制流自动机"></a>控制流自动机</h2><blockquote>
-<p>控制流自动机 (control flow automaton, CFA) 是一个四元组G = (Loc, ∆, lin, lex)，其中Loc 是程序位置的有限集合，∆ 是一个由三元组 (l, st, l′) 组成的集合，其中 l, l′ ∈ Loc, st 为以下基本语句之一：</p>
-<p>赋值语句，数组赋值语句，Havoc 语句，或 Assume 语句<br>$l_{in} ∈ Loc $为初始位置<br>$l_{ex} ∈ Loc$ 为退出位置</p>
-</blockquote>
-<h2 id="格局和执行"><a href="#格局和执行" class="headerlink" title="格局和执行"></a>格局和执行</h2><blockquote>
-<p><strong>格局</strong></p>
-<p>格局 (configuration) 是一个有序对 (l, s)，其中 l ∈ Loc 是程序位置，<br>s ∈ State 是程序状态（即对程序所有变量的一组赋值）。</p>
-<p><strong>执行</strong></p>
-<p>执行（execution）是满足下列条件的格局序列 (l0, s0), . . . ,(ln, sn)：<br>存在一个语句序列 st1, . . . , stn，使得对任意 i ∈ {0, . . . , n − 1}，下<br>列条件都成立：</p>
-<ul>
-<li>$(l_i, st_{i+1}, l_{i+1}) ∈ ∆$，且</li>
-<li>$(s_i, s_{i+1}) ∈ [[st_{i+1}]]$</li>
+[[assert \ p]] = \{(s, s) \ |\ [[p]]_s = true\} ∪ \{(s, \downarrow)\ |\ [[p]]_s = false \}</script><ul>
+<li>若表达式在当前状态下为真，断言成立；</li>
+<li>若表达式在当前状态下为假，程序终止执行，并进入到一个特殊的状态，称为错误状态</li>
 </ul>
-</blockquote>
-<img src="/2023/06/08/cfa/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20193750.png" class="">
-<blockquote>
-<p>设 ($φ_{pre}, φ_{post}$) 为程序 P 的前置-后置条件对，(l, s) 为 P 的格局<br>若$ l = l_{in} 且 s |= φ_{pre}$，称 (l, s) 为 P 的初始格局<br>若 $l = l_{ex} 且 s \ !|= φ_{post}$，称 (l, s) 为 P 的错误格局</p>
-</blockquote>
-<h3 id="基于执行的正确性证明"><a href="#基于执行的正确性证明" class="headerlink" title="基于执行的正确性证明"></a>基于执行的正确性证明</h3><p>程序 P 满足前置-后置条件对 ($φ_{pre}, φ_{post}$)，当且仅当 P 中不存在从初始格局 ($l_0, s_0$) 到错误格局 ($l_n, s_n$) 的执行。</p>
-<h2 id="可达格局与可达图"><a href="#可达格局与可达图" class="headerlink" title="可达格局与可达图"></a>可达格局与可达图</h2><p>验证程序是否满足给定的前置后置条件对：</p>
+<h3 id="过程契约"><a href="#过程契约" class="headerlink" title="过程契约"></a>过程契约</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/*@ requires 0 &lt;= l &amp;&amp; u &lt; len;</span><br><span class="line">ensures (\result == 1) &lt;==&gt; (\exists integer i;</span><br><span class="line">l &lt;= i &amp;&amp; i &lt;= u &amp;&amp; a[i] == e); */</span><br><span class="line">int LinearSearch(int a[], int len, int l, int u, int e)</span><br></pre></td></tr></table></figure>
+<p>每个过程都被标注了前置/后置条件对，称为契约（contract）：</p>
+<ul>
+<li><p>前置条件用 requires 标注；</p>
+</li>
+<li><p>后置条件用 ensures 标注；</p>
+</li>
+<li><p>前置和后置条件可以使用过程的形参为变元；</p>
+</li>
+<li><p>后置条件还可以使用一个特殊的变元 rv，表示返回值。</p>
+</li>
+</ul>
+<h2 id="过程程序的验证"><a href="#过程程序的验证" class="headerlink" title="过程程序的验证"></a>过程程序的验证</h2><p>验证的基本方法：</p>
+<ul>
+<li><p>程序可看作为多个过程（包括 main 过程）的集合</p>
+</li>
+<li><p>对每个过程独立地执行验证，证明其正确性</p>
+<ul>
+<li>从满足前置条件的任意状态进入过程，如果执行能够终止，则在退出过程时一定满足其后置条件</li>
+</ul>
+</li>
+<li><p>过程的执行中可能会调用其他过程</p>
+</li>
+<li><p><strong>程序的正确性</strong> <em>⇔</em> <strong>main</strong> <strong>过程的正确性</strong></p>
+</li>
+</ul>
+<h3 id="基本路径"><a href="#基本路径" class="headerlink" title="基本路径"></a>基本路径</h3><p>程序基本路径（basic path）是满足下列条件的语句序列：</p>
+<ul>
+<li>开始于<strong>过程入口</strong>或<strong>循环头</strong>，终止于<strong>循环头</strong>、断言或<strong>过程出口</strong></li>
+<li>只包含一条分支</li>
+</ul>
+<p>霍尔三元组的概念可以被扩展到基本路径：</p>
+<script type="math/tex; mode=display">
+\{φ\}\ st1; st2; . . . ; stn \ \{ψ\}</script><p>其中，φ 和 ψ 可以是前置条件、循环不变式、断言或者后置条件</p>
+<h3 id="假设语句"><a href="#假设语句" class="headerlink" title="假设语句"></a>假设语句</h3><p>假设语句 assume p 测试布尔表达式 p 在当前状态下是否成立，只有在 p 成立时才继续后续路径的分析</p>
 <ol>
-<li>基于霍尔证明系统，找到循环不变式进行验证条件分析</li>
-<li>基于执行，枚举所有执行看是否到达错误格局</li>
+<li>引入对环境的假设，只对满足假设的路径执行分析</li>
+<li>假设语句不改变程序的状态</li>
+<li>对路径的剩余部分进行分析时可以假设 p 成立</li>
 </ol>
-<img src="/2023/06/08/cfa/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20194821.png" class="">
-<blockquote>
-<p><strong>可达格局</strong></p>
-<p>$对任意格局 (l, s)，如果存在一条执行 (l_0, s_0), . . . ,(l_n, s_n) 使得(l_0, s_0) 为初始格局， \(l_n, s_n) = (l, s)，则称 (l, s) 为可达格局（reachable \ configuration）。记程序\\所有可达格局的集合为 C_R$</p>
-</blockquote>
-<h3 id="基于可达格局的正确性证明"><a href="#基于可达格局的正确性证明" class="headerlink" title="基于可达格局的正确性证明"></a>基于可达格局的正确性证明</h3><p>程序满足前置<em>-</em>后置条件对的充要条件是 $C_R$ 中不含错误格局。</p>
-<blockquote>
-<p>程序可达格局集合 $C_R$ 是满足下列条件的最小集合：</p>
-<ul>
-<li>所有初始格局都是 $C_R$ 中的元素;</li>
-<li>若 $(l, s) ∈ C_R,(l, st, l^<br>′<br>) ∈ ∆ 且 (s, s^<br>′<br>) ∈ [[st]]，则 (l^<br>′<br>, s^<br>′<br>) ∈ C_R$。</li>
-</ul>
-<p><strong>可达图</strong></p>
-<p>可达图（reachability graph）由点集 $C_R$ 和边集 T 构成，并且<br>$(<br>(l, s), st,(l^<br>′<br>, s^<br>′<br>)<br>)<br>∈ T ⇔ (l, st, l^<br>′<br>) ∈ ∆ 且 (s, s^<br>′<br>) ∈ [[st]]$</p>
-</blockquote>
-<p><strong>一般通过构造可达图获取$C_R$</strong></p>
+<p>假设语句的语义：</p>
+<script type="math/tex; mode=display">
+[[assume \ p]] = \{(s, s) \ | \ [[p]]_s = true\}</script><p>假设语句的最弱前置条件：<br>$wp(assume \ p, ψ) = p → ψ$</p>
+<p><strong>当程序中有布尔表达式时，应该引入假设语句</strong></p>
+<h3 id="验证条件生成"><a href="#验证条件生成" class="headerlink" title="验证条件生成"></a>验证条件生成</h3><p>验证条件生成：</p>
+<ol>
+<li>为每条基本路径生成验证条件</li>
+<li>如果<strong>所有基本路径的验证条件都是有效式</strong>，则程序满足规约</li>
+</ol>
+<p>注意：基本路径中只含两种基本语句：</p>
+<ol>
+<li>赋值语句：$wp(x := e, ψ) = ψ[x → e]$</li>
+<li>假设语句：$wp(assume \ p, ψ) = p → ψ$</li>
+</ol>
+<p><strong>对于递归函数</strong></p>
+<p><code>return func()</code>部分应该有两条基本路径，一条是进入子函数，一条是认为子函数成功返回</p>
+<img src="/2023/06/08/Software-Analysis-Verification/procedure/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-08%20192654.png" class="">
 
       
     </div>
@@ -265,19 +281,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2023/06/09/strongest-postcondition/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/06/08/Software-Analysis-Verification/termination/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          strongest-postcondition
+          termination
         
       </div>
     </a>
   
   
-    <a href="/2023/06/08/termination/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2023/06/07/Software-Analysis-Verification/predicate-transformation/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">termination</div>
+      <div class="article-nav-title">predicate-transformation</div>
     </a>
   
 </nav>
@@ -500,6 +516,23 @@
 
 
 <!-- END INTEGRATIONS -->
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 </html>

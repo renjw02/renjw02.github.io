@@ -7,32 +7,28 @@
 <head>
   <meta charset="utf-8">
   
-  <title>命题逻辑 | rjw&#39;s blog</title>
+  <title>array | rjw&#39;s blog</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <meta name="description" content="命题逻辑语法符号集命题逻辑的符号集（alphabet）包括：  真值符号 $\top$（代表 true）和 $\bot$（代表 false）；  命题变元；  逻辑联结词 ¬，∧，∨，→ 和 ↔ 。   其中 $\top$, $\bot$ 和命题变元统称为原子命题。 合式公式 可将公式转换成只包含 ⊥， ¬，∧及命题变元 语义公式F在赋值ρ下的取值 可满足性 可满足的——存在一个赋值ρ使其为真 有">
+  <meta name="description" content="数组数组 a : Z → Z 数组理论$T_A$  状态状态是对程序变元（包括整数变元和数组变元）的一组赋值，即  State : Var → Z ∪ (Z → Z)数组理论的性质 $T_A$ 和 $T_A^&#x3D;$ 都是不可判定的 $T_A$ 和 $T_A^&#x3D;$ 的无量词片段都是可判定的  扩展数组 数组的语义解释 霍尔推理规则">
 <meta property="og:type" content="article">
-<meta property="og:title" content="命题逻辑">
-<meta property="og:url" content="http://example.com/2023/06/01/propositional-logic/index.html">
+<meta property="og:title" content="array">
+<meta property="og:url" content="http://example.com/2023/06/07/Software-Analysis-Verification/array/index.html">
 <meta property="og:site_name" content="rjw&#39;s blog">
-<meta property="og:description" content="命题逻辑语法符号集命题逻辑的符号集（alphabet）包括：  真值符号 $\top$（代表 true）和 $\bot$（代表 false）；  命题变元；  逻辑联结词 ¬，∧，∨，→ 和 ↔ 。   其中 $\top$, $\bot$ 和命题变元统称为原子命题。 合式公式 可将公式转换成只包含 ⊥， ¬，∧及命题变元 语义公式F在赋值ρ下的取值 可满足性 可满足的——存在一个赋值ρ使其为真 有">
+<meta property="og:description" content="数组数组 a : Z → Z 数组理论$T_A$  状态状态是对程序变元（包括整数变元和数组变元）的一组赋值，即  State : Var → Z ∪ (Z → Z)数组理论的性质 $T_A$ 和 $T_A^&#x3D;$ 都是不可判定的 $T_A$ 和 $T_A^&#x3D;$ 的无量词片段都是可判定的  扩展数组 数组的语义解释 霍尔推理规则">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/2023/06/01/propositional-logic/image-20230601164802286.png">
-<meta property="og:image" content="http://example.com/2023/06/01/propositional-logic/image-20230601164940763.png">
-<meta property="og:image" content="http://example.com/2023/06/01/propositional-logic/image-20230601165403583.png">
-<meta property="og:image" content="http://example.com/2023/06/01/propositional-logic/image-20230601165650363.png">
-<meta property="og:image" content="http://example.com/2023/06/01/propositional-logic/image-20230601165816597.png">
-<meta property="og:image" content="http://example.com/2023/06/01/propositional-logic/image-20230601165926253.png">
-<meta property="og:image" content="http://example.com/2023/06/01/propositional-logic/image-20230601165951187.png">
-<meta property="og:image" content="http://example.com/2023/06/01/propositional-logic/image-20230601170431291.png">
-<meta property="og:image" content="http://example.com/2023/06/01/propositional-logic/image-20230601170708342.png">
-<meta property="article:published_time" content="2023-06-01T11:45:01.000Z">
-<meta property="article:modified_time" content="2023-06-10T12:26:51.613Z">
+<meta property="og:image" content="http://example.com/2023/06/07/Software-Analysis-Verification/array/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20220113.png">
+<meta property="og:image" content="http://example.com/2023/06/07/Software-Analysis-Verification/array/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20220442.png">
+<meta property="og:image" content="http://example.com/2023/06/07/Software-Analysis-Verification/array/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20221508.png">
+<meta property="og:image" content="http://example.com/2023/06/07/Software-Analysis-Verification/array/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20221531.png">
+<meta property="og:image" content="http://example.com/2023/06/07/Software-Analysis-Verification/array/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20221736.png">
+<meta property="article:published_time" content="2023-06-07T13:58:19.000Z">
+<meta property="article:modified_time" content="2023-06-07T14:18:24.007Z">
 <meta property="article:author" content="JiaWei Ren">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/06/01/propositional-logic/image-20230601164802286.png">
+<meta name="twitter:image" content="http://example.com/2023/06/07/Software-Analysis-Verification/array/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20220113.png">
   
     <link rel="alternative" href="/atom.xml" title="rjw&#39;s blog" type="application/atom+xml">
   
@@ -176,13 +172,13 @@
   <section id="main">
     
     <h2 itemprop="name">
-      <a class="article-title" href="/2023/06/01/propositional-logic/">命题逻辑</a>
+      <a class="article-title" href="/2023/06/07/Software-Analysis-Verification/array/">array</a>
     </h2>
 
 
     <div class="row">
 <div class="col-md-9 col-sm-9 blog-posts">
-<article id="post-propositional-logic" class="article article-type-post blog-item" itemscope itemprop="blogPost">
+<article id="post-Software-Analysis-Verification/array" class="article article-type-post blog-item" itemscope itemprop="blogPost">
   <div class="article-meta">
   </div>
   <div class="article-inner">
@@ -192,11 +188,11 @@
       <ul class="blog-info">
 	<li><i class="fa fa-user"></i> Anonymous</li>
 	<li><i class="fa fa-calendar"></i>
-	  <time datetime="2023-06-01T11:45:01.000Z" itemprop="datePublished">2023/06/01</time>
+	  <time datetime="2023-06-07T13:58:19.000Z" itemprop="datePublished">2023/06/07</time>
 
 	</li>
 	<li class="hidden-xs"><i class="fa fa-comments"></i>
-	  <a href="http://example.com/2023/06/01/propositional-logic/#disqus_thread" class="article-comment-link">Comments</a>
+	  <a href="http://example.com/2023/06/07/Software-Analysis-Verification/array/#disqus_thread" class="article-comment-link">Comments</a>
 	</li>
 	<li class="hidden-xs"><i class="fa fa-tags"></i> 
 	  
@@ -218,50 +214,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="命题逻辑"><a href="#命题逻辑" class="headerlink" title="命题逻辑"></a>命题逻辑</h1><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="符号集"><a href="#符号集" class="headerlink" title="符号集"></a>符号集</h3><p>命题逻辑的符号集（<em>alphabet</em>）包括：</p>
-<ul>
-<li><p>真值符号 $\top$（代表 <em>true</em>）和 $\bot$（代表 <em>false</em>）；</p>
-</li>
-<li><p>命题变元；</p>
-</li>
-<li><p>逻辑联结词 <em>¬</em>，<em>∧</em>，<em>∨</em>，<em>→</em> 和 <em>↔</em> 。</p>
-</li>
+        <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>数组 <em>a</em> : Z <em>→</em> Z</p>
+<h2 id="数组理论"><a href="#数组理论" class="headerlink" title="数组理论"></a>数组理论</h2><h3 id="T-A"><a href="#T-A" class="headerlink" title="$T_A$"></a>$T_A$</h3><img src="/2023/06/07/Software-Analysis-Verification/array/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20220113.png" class="" title="屏幕截图 2023-06-07 220113">
+<img src="/2023/06/07/Software-Analysis-Verification/array/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20220442.png" class="">
+<h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>状态是对程序变元（包括整数变元和数组变元）的一组赋值，即</p>
+<script type="math/tex; mode=display">
+State : Var → Z ∪ (Z → Z)</script><h3 id="数组理论的性质"><a href="#数组理论的性质" class="headerlink" title="数组理论的性质"></a>数组理论的性质</h3><ul>
+<li>$T_A$ 和 $T_A^=$ 都是不可判定的</li>
+<li>$T_A$ 和 $T_A^=$ 的无量词片段都是可判定的</li>
 </ul>
-<p>其中 $\top$<em>,</em> $\bot$ 和命题变元统称为原子命题。</p>
-<h3 id="合式公式"><a href="#合式公式" class="headerlink" title="合式公式"></a>合式公式</h3><img src="/2023/06/01/propositional-logic/image-20230601164802286.png" class="" title="label">
-<p><strong>可将公式转换成只包含 ⊥， ¬，∧及命题变元</strong></p>
-<h2 id="语义"><a href="#语义" class="headerlink" title="语义"></a>语义</h2><h3 id="公式F在赋值ρ下的取值"><a href="#公式F在赋值ρ下的取值" class="headerlink" title="公式F在赋值ρ下的取值"></a>公式F在赋值ρ下的取值</h3><img src="/2023/06/01/propositional-logic/image-20230601164940763.png" class="" title="label">
-<h3 id="可满足性"><a href="#可满足性" class="headerlink" title="可满足性"></a>可满足性</h3><ul>
-<li>可满足的——存在一个赋值ρ使其为真</li>
-<li>有效的（永真）——所有赋值都为真</li>
-<li>不可满足的（永假）——不存在赋值使其为真</li>
-</ul>
-<p><em>F</em> 是永真式常常记作 $|= F$</p>
-<p><strong>可用真值表证明可满足性</strong></p>
-<h3 id="语义蕴涵"><a href="#语义蕴涵" class="headerlink" title="语义蕴涵"></a>语义蕴涵</h3><img src="/2023/06/01/propositional-logic/image-20230601165403583.png" class="" title="label">
-<p><strong>语义等价：</strong>若F和G互相语义蕴涵，则两者语义等价。即它们在任意赋值下取值都相同。</p>
-<h2 id="证明系统"><a href="#证明系统" class="headerlink" title="证明系统"></a>证明系统</h2><p>（命题逻辑的相继式演算系统 $S_{PL}$）</p>
-<h3 id="相继式"><a href="#相继式" class="headerlink" title="相继式"></a>相继式</h3><img src="/2023/06/01/propositional-logic/image-20230601165650363.png" class="" title="label">
-<h3 id="推理规则"><a href="#推理规则" class="headerlink" title="推理规则"></a>推理规则</h3><p>前件规则：</p>
-<img src="/2023/06/01/propositional-logic/image-20230601165816597.png" class="" title="label">
-<p>后件规则：</p>
-<img src="/2023/06/01/propositional-logic/image-20230601165926253.png" class="" title="label">
-<p>特殊：</p>
-<img src="/2023/06/01/propositional-logic/image-20230601165951187.png" class="" title="label">
-<h3 id="推导树"><a href="#推导树" class="headerlink" title="推导树"></a>推导树</h3><p>推导树（<em>derivation tree</em>）是一棵满足下列条件的树：</p>
-<ul>
-<li><p>每个节点对应一个相继式，树叶对应空；</p>
-</li>
-<li><p>每个中间节点是某规则的结论，而它的子节点是该规则的前提。</p>
-</li>
-</ul>
-<p><strong>如果存在一棵以F为根的推导树，就说F可推导</strong></p>
-<h3 id="S-PL-的性质"><a href="#S-PL-的性质" class="headerlink" title="$S_{PL}$的性质"></a>$S_{PL}$的性质</h3><img src="/2023/06/01/propositional-logic/image-20230601170431291.png" class="" title="label">
-<p><strong>因此，证明一条规则可靠，只需假设前提为真，证明结论为真。</strong></p>
-<img src="/2023/06/01/propositional-logic/image-20230601170708342.png" class="" title="label">
-<p><strong>相继式证明系统可用于证明一条命题逻辑是否是有效式，只需能利用规则推出一个推导树即可。</strong></p>
-<h3 id="命题逻辑的可判定性"><a href="#命题逻辑的可判定性" class="headerlink" title="命题逻辑的可判定性"></a>命题逻辑的可判定性</h3><p>命题逻辑是<strong>可判定的（<em>decidable</em>）</strong>，即存在一个算法，对任意给定的命题逻辑公式，能够在有限时间内正确地判定出该公式是否是有效式。</p>
-<p>如：真值表法</p>
+<h2 id="扩展数组"><a href="#扩展数组" class="headerlink" title="扩展数组"></a>扩展数组</h2><img src="/2023/06/07/Software-Analysis-Verification/array/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20221508.png" class="">
+<h3 id="数组的语义解释"><a href="#数组的语义解释" class="headerlink" title="数组的语义解释"></a>数组的语义解释</h3><img src="/2023/06/07/Software-Analysis-Verification/array/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20221531.png" class="">
+<h3 id="霍尔推理规则"><a href="#霍尔推理规则" class="headerlink" title="霍尔推理规则"></a>霍尔推理规则</h3><img src="/2023/06/07/Software-Analysis-Verification/array/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20221736.png" class="">
 
       
     </div>
@@ -270,15 +234,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2023/06/01/first-order-logic/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/06/07/Software-Analysis-Verification/predicate-transformation/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          一阶逻辑
+          predicate-transformation
         
       </div>
     </a>
   
+  
+    <a href="/2023/06/06/Software-Analysis-Verification/hoare/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hoare</div>
+    </a>
   
 </nav>
 
@@ -500,6 +469,23 @@
 
 
 <!-- END INTEGRATIONS -->
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 </html>

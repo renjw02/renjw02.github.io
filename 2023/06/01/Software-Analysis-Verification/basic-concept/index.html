@@ -7,27 +7,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>strongest-postcondition | rjw&#39;s blog</title>
+  <title>基本概念 | rjw&#39;s blog</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <meta name="description" content="最强后置条件定义  语义蕴涵和状态包含 给定两个一阶逻辑公式 φ 和 ψ，如果对任意解释 M 和任意赋值 ρ，只要 [[φ]]M,ρ 为真，[[ψ]]M,ρ 就必为真，就称 φ 语义蕴涵（implies）ψ，或称 ψ 是 φ 的有效推论（consequence），记为 φ ⇒ ψ 定理 φ ⇒ ψ 当且仅当 {φ} ⊆ {ψ}，即$\{s \ | \ [[φ]]_s &#x3D; true\} ⊆ \{s">
+  <meta name="description" content="基本概念 程序规约 前置条件、后置条件 循环不变式 秩函数  前置条件执行代码之前假设满足的条件 后置条件执行代码之后必须满足的条件 以前置和后置条件定义程序规约 断言在程序某个位置必须成立的逻辑表达式 程序验证程序行为是否符合规约？即，从满足前置条件的任何状态出发，执行到指定位置是否满足断言，执行后是否满足后置条件？ 核心任务是处理循环 循环不变式在循环头位置（无论第几次到达）永远成立的逻辑表达">
 <meta property="og:type" content="article">
-<meta property="og:title" content="strongest-postcondition">
-<meta property="og:url" content="http://example.com/2023/06/09/strongest-postcondition/index.html">
+<meta property="og:title" content="基本概念">
+<meta property="og:url" content="http://example.com/2023/06/01/Software-Analysis-Verification/basic-concept/index.html">
 <meta property="og:site_name" content="rjw&#39;s blog">
-<meta property="og:description" content="最强后置条件定义  语义蕴涵和状态包含 给定两个一阶逻辑公式 φ 和 ψ，如果对任意解释 M 和任意赋值 ρ，只要 [[φ]]M,ρ 为真，[[ψ]]M,ρ 就必为真，就称 φ 语义蕴涵（implies）ψ，或称 ψ 是 φ 的有效推论（consequence），记为 φ ⇒ ψ 定理 φ ⇒ ψ 当且仅当 {φ} ⊆ {ψ}，即$\{s \ | \ [[φ]]_s &#x3D; true\} ⊆ \{s">
+<meta property="og:description" content="基本概念 程序规约 前置条件、后置条件 循环不变式 秩函数  前置条件执行代码之前假设满足的条件 后置条件执行代码之后必须满足的条件 以前置和后置条件定义程序规约 断言在程序某个位置必须成立的逻辑表达式 程序验证程序行为是否符合规约？即，从满足前置条件的任何状态出发，执行到指定位置是否满足断言，执行后是否满足后置条件？ 核心任务是处理循环 循环不变式在循环头位置（无论第几次到达）永远成立的逻辑表达">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/2023/06/09/strongest-postcondition/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20201440.png">
-<meta property="og:image" content="http://example.com/2023/06/09/strongest-postcondition/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20201905.png">
-<meta property="og:image" content="http://example.com/2023/06/09/strongest-postcondition/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20202750.png">
-<meta property="og:image" content="http://example.com/2023/06/09/strongest-postcondition/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20205127.png">
-<meta property="article:published_time" content="2023-06-09T12:06:45.000Z">
-<meta property="article:modified_time" content="2023-06-09T12:51:42.584Z">
+<meta property="article:published_time" content="2023-06-01T11:45:01.000Z">
+<meta property="article:modified_time" content="2023-06-10T12:26:38.825Z">
 <meta property="article:author" content="JiaWei Ren">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/06/09/strongest-postcondition/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20201440.png">
   
     <link rel="alternative" href="/atom.xml" title="rjw&#39;s blog" type="application/atom+xml">
   
@@ -171,13 +166,13 @@
   <section id="main">
     
     <h2 itemprop="name">
-      <a class="article-title" href="/2023/06/09/strongest-postcondition/">strongest-postcondition</a>
+      <a class="article-title" href="/2023/06/01/Software-Analysis-Verification/basic-concept/">基本概念</a>
     </h2>
 
 
     <div class="row">
 <div class="col-md-9 col-sm-9 blog-posts">
-<article id="post-strongest-postcondition" class="article article-type-post blog-item" itemscope itemprop="blogPost">
+<article id="post-Software-Analysis-Verification/basic-concept" class="article article-type-post blog-item" itemscope itemprop="blogPost">
   <div class="article-meta">
   </div>
   <div class="article-inner">
@@ -187,11 +182,11 @@
       <ul class="blog-info">
 	<li><i class="fa fa-user"></i> Anonymous</li>
 	<li><i class="fa fa-calendar"></i>
-	  <time datetime="2023-06-09T12:06:45.000Z" itemprop="datePublished">2023/06/09</time>
+	  <time datetime="2023-06-01T11:45:01.000Z" itemprop="datePublished">2023/06/01</time>
 
 	</li>
 	<li class="hidden-xs"><i class="fa fa-comments"></i>
-	  <a href="http://example.com/2023/06/09/strongest-postcondition/#disqus_thread" class="article-comment-link">Comments</a>
+	  <a href="http://example.com/2023/06/01/Software-Analysis-Verification/basic-concept/#disqus_thread" class="article-comment-link">Comments</a>
 	</li>
 	<li class="hidden-xs"><i class="fa fa-tags"></i> 
 	  
@@ -213,33 +208,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="最强后置条件"><a href="#最强后置条件" class="headerlink" title="最强后置条件"></a>最强后置条件</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><img src="/2023/06/09/strongest-postcondition/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20201440.png" class="">
-<img src="/2023/06/09/strongest-postcondition/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20201905.png" class="">
-<h3 id="语义蕴涵和状态包含"><a href="#语义蕴涵和状态包含" class="headerlink" title="语义蕴涵和状态包含"></a>语义蕴涵和状态包含</h3><blockquote>
-<p>给定两个一阶逻辑公式 φ 和 ψ，如果对任意解释 M 和任意赋值 ρ，只要 [[φ]]M,ρ 为真，[[ψ]]M,ρ 就必为真，就称 φ 语义蕴涵（implies）ψ，或称 ψ 是 φ 的有效推论（consequence），记为 φ ⇒ ψ</p>
-<p><strong>定理</strong></p>
-<p>φ ⇒ ψ 当且仅当 {φ} ⊆ {ψ}，即<br>$\{s \ | \ [[φ]]_s = true\} ⊆ \{s \ | \ [[ψ]]_s = true\}$</p>
-</blockquote>
-<h3 id="基于最强后置条件的程序验证"><a href="#基于最强后置条件的程序验证" class="headerlink" title="基于最强后置条件的程序验证"></a>基于最强后置条件的程序验证</h3><img src="/2023/06/09/strongest-postcondition/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20202750.png" class="">
-<h2 id="量词消去"><a href="#量词消去" class="headerlink" title="量词消去"></a>量词消去</h2><blockquote>
-<p><strong>定理</strong></p>
-<p>如果项 t 中不含变量 x，则下面两个公式语义等价：<br>$(∃x. φ ∧ x = t) ⇔ φ[x → t]$</p>
-<p><strong>定理</strong></p>
-<p>如果项 t 中不含变量 x，则下列两个公式语义等价：<br>$(∀x. φ ∨ x  != t) ⇔ φ[x → t]$</p>
-</blockquote>
-<h2 id="最强后置条件计算"><a href="#最强后置条件计算" class="headerlink" title="最强后置条件计算"></a>最强后置条件计算</h2><p>赋值：</p>
-<p>$sp(φ, x := e) ⇔ ∃x0. x = e[x → x0] ∧ φ[x → x0]$</p>
-<p>havoc:</p>
-<p>$sp(φ, havoc \ x) ⇔ ∃x. φ$</p>
-<p>假设：</p>
-<p>$sp(φ, assume \ p) ⇔ φ ∧ p$</p>
-<p>顺序：</p>
-<p>$sp(φ, st1; st2) ⇔ sp(sp(φ, st1), st2)$</p>
-<p>分支：</p>
-<p>$sp(φ, if (p) \{st1\} else \{st2\}) ⇔ sp(φ ∧ p, st1) ∨ sp(φ ∧ ¬p, st2)$</p>
-<p>循环：</p>
-<p>$sp(φ, while (p) \{st\}) ⇔<br>∨_{<br>i∈N}<br>sp (<br>sp^i<br>(φ, assume p; st), assume ¬p<br>)$</p>
-<h2 id="验证条件"><a href="#验证条件" class="headerlink" title="验证条件"></a>验证条件</h2><img src="/2023/06/09/strongest-postcondition/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20205127.png" class="">
+        <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><ul>
+<li>程序规约</li>
+<li>前置条件、后置条件</li>
+<li>循环不变式</li>
+<li>秩函数</li>
+</ul>
+<h2 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h2><p>执行代码之前假设满足的条件</p>
+<h2 id="后置条件"><a href="#后置条件" class="headerlink" title="后置条件"></a>后置条件</h2><p>执行代码之后必须满足的条件</p>
+<p><strong>以前置和后置条件定义程序规约</strong></p>
+<h2 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h2><p>在程序某个位置必须成立的逻辑表达式</p>
+<h2 id="程序验证"><a href="#程序验证" class="headerlink" title="程序验证"></a>程序验证</h2><p>程序行为是否符合规约？即，从满足前置条件的任何状态出发，执行到指定位置是否满足断言，执行后是否满足后置条件？</p>
+<p>核心任务是处理<strong>循环</strong></p>
+<h2 id="循环不变式"><a href="#循环不变式" class="headerlink" title="循环不变式"></a>循环不变式</h2><p>在循环头位置（无论第几次到达）永远成立的逻辑表达式</p>
+<h2 id="秩函数"><a href="#秩函数" class="headerlink" title="秩函数"></a>秩函数</h2><p>定义在程序变量上的一个算术表达式</p>
+<ul>
+<li><p>该表达式的值随着循环迭代次数的增加而严格递减，且减少幅度不会趋向于无穷小</p>
+</li>
+<li><p>该表达式的值有下界</p>
+</li>
+</ul>
+<p><strong>如果找到循环的一个秩函数，则循环一定终止。</strong></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*@ requires m &gt;= n &amp;&amp; n &gt; 0;</span></span><br><span class="line"><span class="comment">ensures a = gcd(m, n) */</span></span><br><span class="line"><span class="function"><span class="built_in">int</span> <span class="title">fGCD</span>(<span class="params"><span class="built_in">int</span> m, <span class="built_in">int</span> n</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">int</span> a = m;</span><br><span class="line">    <span class="built_in">int</span> b = n;</span><br><span class="line">    <span class="comment">/*@ loop invariant</span></span><br><span class="line"><span class="comment">    a &gt;= b &amp;&amp; b &gt;= 0 &amp;&amp;</span></span><br><span class="line"><span class="comment">    gcd(a,b) == gcd(m,n) */</span></span><br><span class="line">    <span class="comment">/*@ loop variant a + b */</span></span><br><span class="line">    <span class="keyword">while</span> (b != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">int</span> tmp = a % b;</span><br><span class="line">        a = b;</span><br><span class="line">        b = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*@ assert a == gcd(m,n);*/</span></span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -248,19 +238,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2023/06/09/bmc/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/06/01/Software-Analysis-Verification/theories/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          bmc
+          一阶理论
         
       </div>
     </a>
   
   
-    <a href="/2023/06/08/cfa/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2023/06/01/Software-Analysis-Verification/first-order-logic/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">cfa</div>
+      <div class="article-nav-title">一阶逻辑</div>
     </a>
   
 </nav>
@@ -483,6 +473,23 @@
 
 
 <!-- END INTEGRATIONS -->
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 </html>

@@ -7,26 +7,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>predicate-transformation | rjw&#39;s blog</title>
+  <title>cfa | rjw&#39;s blog</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <meta name="description" content="谓词变换谓词变换（Predicate Transformer）：给定一条断言和一条程序语句，通过变换得到另一条断言。 常见的谓词变换有：  最弱前置条件（Weakest Precondition）wp(st, ψ)：假设语句执行后满足 ψ，执行语句前必须满足的条件。  {wp(st, ψ)} st {ψ} 是有效式，即 wp(st, ψ) 是一个能够让 ψ 成立的前置条件，且  若存在 φ 使得">
+  <meta name="description" content="程序的自动机表示IMP扩展havoc语句在 IMP 中引入 havoc 语句，用于建模非确定性havoc 语句的语义：  [[havoc \ x]] &#x3D; \{(s, s^ ′ ) | s^ ′ &#x3D; s[x_7→ ⋆]\}其中 ⋆ 代表任意值，havoc x 即给 x 赋任意值havoc 语句的最弱前置条件：$wp(havoc \ x, ψ) &#x3D; ∀x. ψ$ 控制流自动机 控制流自动机 (cont">
 <meta property="og:type" content="article">
-<meta property="og:title" content="predicate-transformation">
-<meta property="og:url" content="http://example.com/2023/06/07/predicate-transformation/index.html">
+<meta property="og:title" content="cfa">
+<meta property="og:url" content="http://example.com/2023/06/08/Software-Analysis-Verification/cfa/index.html">
 <meta property="og:site_name" content="rjw&#39;s blog">
-<meta property="og:description" content="谓词变换谓词变换（Predicate Transformer）：给定一条断言和一条程序语句，通过变换得到另一条断言。 常见的谓词变换有：  最弱前置条件（Weakest Precondition）wp(st, ψ)：假设语句执行后满足 ψ，执行语句前必须满足的条件。  {wp(st, ψ)} st {ψ} 是有效式，即 wp(st, ψ) 是一个能够让 ψ 成立的前置条件，且  若存在 φ 使得">
+<meta property="og:description" content="程序的自动机表示IMP扩展havoc语句在 IMP 中引入 havoc 语句，用于建模非确定性havoc 语句的语义：  [[havoc \ x]] &#x3D; \{(s, s^ ′ ) | s^ ′ &#x3D; s[x_7→ ⋆]\}其中 ⋆ 代表任意值，havoc x 即给 x 赋任意值havoc 语句的最弱前置条件：$wp(havoc \ x, ψ) &#x3D; ∀x. ψ$ 控制流自动机 控制流自动机 (cont">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/2023/06/07/predicate-transformation/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20223042.png">
-<meta property="og:image" content="http://example.com/2023/06/07/predicate-transformation/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20223515.png">
-<meta property="og:image" content="http://example.com/2023/06/07/predicate-transformation/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20225209.png">
-<meta property="article:published_time" content="2023-06-07T14:24:57.000Z">
-<meta property="article:modified_time" content="2023-06-07T14:59:16.668Z">
+<meta property="og:image" content="http://example.com/2023/06/08/Software-Analysis-Verification/cfa/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20193750.png">
+<meta property="og:image" content="http://example.com/2023/06/08/Software-Analysis-Verification/cfa/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20194821.png">
+<meta property="article:published_time" content="2023-06-08T12:28:06.000Z">
+<meta property="article:modified_time" content="2023-06-09T12:07:41.060Z">
 <meta property="article:author" content="JiaWei Ren">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/06/07/predicate-transformation/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20223042.png">
+<meta name="twitter:image" content="http://example.com/2023/06/08/Software-Analysis-Verification/cfa/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20193750.png">
   
     <link rel="alternative" href="/atom.xml" title="rjw&#39;s blog" type="application/atom+xml">
   
@@ -170,13 +169,13 @@
   <section id="main">
     
     <h2 itemprop="name">
-      <a class="article-title" href="/2023/06/07/predicate-transformation/">predicate-transformation</a>
+      <a class="article-title" href="/2023/06/08/Software-Analysis-Verification/cfa/">cfa</a>
     </h2>
 
 
     <div class="row">
 <div class="col-md-9 col-sm-9 blog-posts">
-<article id="post-predicate-transformation" class="article article-type-post blog-item" itemscope itemprop="blogPost">
+<article id="post-Software-Analysis-Verification/cfa" class="article article-type-post blog-item" itemscope itemprop="blogPost">
   <div class="article-meta">
   </div>
   <div class="article-inner">
@@ -186,11 +185,11 @@
       <ul class="blog-info">
 	<li><i class="fa fa-user"></i> Anonymous</li>
 	<li><i class="fa fa-calendar"></i>
-	  <time datetime="2023-06-07T14:24:57.000Z" itemprop="datePublished">2023/06/07</time>
+	  <time datetime="2023-06-08T12:28:06.000Z" itemprop="datePublished">2023/06/08</time>
 
 	</li>
 	<li class="hidden-xs"><i class="fa fa-comments"></i>
-	  <a href="http://example.com/2023/06/07/predicate-transformation/#disqus_thread" class="article-comment-link">Comments</a>
+	  <a href="http://example.com/2023/06/08/Software-Analysis-Verification/cfa/#disqus_thread" class="article-comment-link">Comments</a>
 	</li>
 	<li class="hidden-xs"><i class="fa fa-tags"></i> 
 	  
@@ -212,71 +211,52 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="谓词变换"><a href="#谓词变换" class="headerlink" title="谓词变换"></a>谓词变换</h1><p>谓词变换（Predicate Transformer）：给定一条断言和一条程序语句，通过变换得到另一条断言。</p>
-<p>常见的谓词变换有：</p>
-<ul>
-<li><p>最弱前置条件（Weakest Precondition）wp(st, ψ)：假设语句执行后满足 ψ，执行语句前必须满足的条件。</p>
-<ol>
-<li><p>{wp(st, ψ)} st {ψ} 是有效式，即 wp(st, ψ) 是一个能够让 ψ 成<br>立的前置条件，且</p>
-</li>
-<li><p>若存在 φ 使得 {φ} st {ψ} 是有效式，则 φ ⇒ wp(st, ψ)，即<br>wp(st, ψ) 是所有此类前置条件中最弱的。</p>
-</li>
-</ol>
-</li>
-<li><p>最强后置条件 （Strongest Postcondition）sp(φ, st)：假设语句执行前满足 φ，执行语句后必定满足的条件。</p>
-<ol>
-<li><p>{φ} st {sp(φ, st)} 是有效式，且</p>
-</li>
-<li><p>若存在 ψ 使得 {φ} st {ψ} 是有效式，则 sp(φ, st) ⇒ ψ，即<br>sp(φ, st) 是所有此类后置条件中最强的。</p>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="最弱前置条件"><a href="#最弱前置条件" class="headerlink" title="最弱前置条件"></a>最弱前置条件</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><img src="/2023/06/07/predicate-transformation/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20223042.png" class="">
-<h3 id="验证条件"><a href="#验证条件" class="headerlink" title="验证条件"></a>验证条件</h3><p>给定程序 <em>st</em> 和规约 (<em>φ, ψ</em>)，验证条件 (verification conditions) 是一组一阶逻辑公式，满足：</p>
-<p><strong>如果所有验证条件都是有效式，则程序满足规约</strong></p>
-<blockquote>
-<p>最弱前置条件提供了一种生成验证条件的方法：</p>
-<ol>
-<li><p>从程序规约的后置条件 <em>ψ</em> 开始</p>
-</li>
-<li><p>由后向前计算程序的最弱前置条件 <em>wp</em>(<em>st, ψ</em>)</p>
-</li>
-<li><p>验证 <em>φ</em> <em>→</em> <em>wp</em>(<em>st, ψ</em>) 是否为有效式</p>
-</li>
-</ol>
-</blockquote>
-<h3 id="最弱前置条件计算"><a href="#最弱前置条件计算" class="headerlink" title="最弱前置条件计算"></a>最弱前置条件计算</h3><img src="/2023/06/07/predicate-transformation/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20223515.png" class="">
-<blockquote>
-<p><strong>计算赋值语句的wp时可能会遇到的问题</strong></p>
-<p>当公式 φ 中存在与 x 同名的约束变元时，如何避免 φ[x → e] 发生变元捕获？<br>α-替换：在替换之前先重命名 φ 中可能导致捕获的约束变元<br><strong>更一般的替换形式</strong>是：φ[G0 → F0, · · · , Gn → Fn], 其中 Fi, Gi 也都是公式。为避免变元捕获，令</p>
+        <h1 id="程序的自动机表示"><a href="#程序的自动机表示" class="headerlink" title="程序的自动机表示"></a>程序的自动机表示</h1><h2 id="IMP扩展havoc语句"><a href="#IMP扩展havoc语句" class="headerlink" title="IMP扩展havoc语句"></a>IMP扩展havoc语句</h2><p>在 IMP 中引入 havoc 语句，用于建模非确定性<br>havoc 语句的语义：</p>
 <script type="math/tex; mode=display">
-V_{free} =
-∪_
-i
-free(F_i)∪ free(G_i)</script><p>对 φ 中的每一个约束变元 x，若 $x ∈ V_{free}$，则以一个新的变元符号来重命名 x；<br>以 φ′ 表示重命名后的公式，对 φ′ 同时应用所有替换；<br>如果 Gi 和 Gj 在 φ′ 中的某处重合，并且 Gi 是 Gj 的子公式，则只应用范围较大的替换，即 Gj → Fj。</p>
+[[havoc \ x]] = \{(s, s^
+′
+) | s^
+′ = s[x_7→ ⋆]\}</script><p>其中 ⋆ 代表任意值，havoc x 即给 x 赋任意值<br>havoc 语句的最弱前置条件：<br>$wp(havoc \ x, ψ) = ∀x. ψ$</p>
+<h2 id="控制流自动机"><a href="#控制流自动机" class="headerlink" title="控制流自动机"></a>控制流自动机</h2><blockquote>
+<p>控制流自动机 (control flow automaton, CFA) 是一个四元组G = (Loc, ∆, lin, lex)，其中Loc 是程序位置的有限集合，∆ 是一个由三元组 (l, st, l′) 组成的集合，其中 l, l′ ∈ Loc, st 为以下基本语句之一：</p>
+<p>赋值语句，数组赋值语句，Havoc 语句，或 Assume 语句<br>$l_{in} ∈ Loc $为初始位置<br>$l_{ex} ∈ Loc$ 为退出位置</p>
 </blockquote>
-<h3 id="验证条件-1"><a href="#验证条件-1" class="headerlink" title="验证条件"></a>验证条件</h3><img src="/2023/06/07/predicate-transformation/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-07%20225209.png" class="">
-<h3 id="基于最弱前置条件的程序验证"><a href="#基于最弱前置条件的程序验证" class="headerlink" title="基于最弱前置条件的程序验证"></a>基于最弱前置条件的程序验证</h3><blockquote>
-<ol>
-<li><p>计算 φ′ = wp(st, ψ)</p>
-</li>
-<li><p>计算 VC(st, ψ)</p>
-</li>
-<li><p>检查 <em>φ</em> <em>→</em> <em>φ</em> <em>′</em> 是否有效式</p>
-</li>
-<li><p>检查 VC(st, ψ) 中的每一个公式是否有效式</p>
-</li>
-</ol>
-</blockquote>
+<h2 id="格局和执行"><a href="#格局和执行" class="headerlink" title="格局和执行"></a>格局和执行</h2><blockquote>
+<p><strong>格局</strong></p>
+<p>格局 (configuration) 是一个有序对 (l, s)，其中 l ∈ Loc 是程序位置，<br>s ∈ State 是程序状态（即对程序所有变量的一组赋值）。</p>
+<p><strong>执行</strong></p>
+<p>执行（execution）是满足下列条件的格局序列 (l0, s0), . . . ,(ln, sn)：<br>存在一个语句序列 st1, . . . , stn，使得对任意 i ∈ {0, . . . , n − 1}，下<br>列条件都成立：</p>
 <ul>
-<li><p>VC(st, ψ) 和 φ → φ′ 统称为验证条件（Verification Conditions)</p>
-</li>
-<li><p>如果所有验证条件的检查都通过，则 st |= (φ, ψ)</p>
-</li>
-<li><p>若 st |= (φ, ψ)，不一定能够通过所有验证条件的检查</p>
-</li>
+<li>$(l_i, st_{i+1}, l_{i+1}) ∈ ∆$，且</li>
+<li>$(s_i, s_{i+1}) ∈ [[st_{i+1}]]$</li>
 </ul>
+</blockquote>
+<img src="/2023/06/08/Software-Analysis-Verification/cfa/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20193750.png" class="">
+<blockquote>
+<p>设 ($φ_{pre}, φ_{post}$) 为程序 P 的前置-后置条件对，(l, s) 为 P 的格局<br>若$ l = l_{in} 且 s |= φ_{pre}$，称 (l, s) 为 P 的初始格局<br>若 $l = l_{ex} 且 s \ !|= φ_{post}$，称 (l, s) 为 P 的错误格局</p>
+</blockquote>
+<h3 id="基于执行的正确性证明"><a href="#基于执行的正确性证明" class="headerlink" title="基于执行的正确性证明"></a>基于执行的正确性证明</h3><p>程序 P 满足前置-后置条件对 ($φ_{pre}, φ_{post}$)，当且仅当 P 中不存在从初始格局 ($l_0, s_0$) 到错误格局 ($l_n, s_n$) 的执行。</p>
+<h2 id="可达格局与可达图"><a href="#可达格局与可达图" class="headerlink" title="可达格局与可达图"></a>可达格局与可达图</h2><p>验证程序是否满足给定的前置后置条件对：</p>
+<ol>
+<li>基于霍尔证明系统，找到循环不变式进行验证条件分析</li>
+<li>基于执行，枚举所有执行看是否到达错误格局</li>
+</ol>
+<img src="/2023/06/08/Software-Analysis-Verification/cfa/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-09%20194821.png" class="">
+<blockquote>
+<p><strong>可达格局</strong></p>
+<p>$对任意格局 (l, s)，如果存在一条执行 (l_0, s_0), . . . ,(l_n, s_n) 使得(l_0, s_0) 为初始格局， \(l_n, s_n) = (l, s)，则称 (l, s) 为可达格局（reachable \ configuration）。记程序\\所有可达格局的集合为 C_R$</p>
+</blockquote>
+<h3 id="基于可达格局的正确性证明"><a href="#基于可达格局的正确性证明" class="headerlink" title="基于可达格局的正确性证明"></a>基于可达格局的正确性证明</h3><p>程序满足前置<em>-</em>后置条件对的充要条件是 $C_R$ 中不含错误格局。</p>
+<blockquote>
+<p>程序可达格局集合 $C_R$ 是满足下列条件的最小集合：</p>
+<ul>
+<li>所有初始格局都是 $C_R$ 中的元素;</li>
+<li>若 $(l, s) ∈ C_R,(l, st, l^<br>′<br>) ∈ ∆ 且 (s, s^<br>′<br>) ∈ [[st]]，则 (l^<br>′<br>, s^<br>′<br>) ∈ C_R$。</li>
+</ul>
+<p><strong>可达图</strong></p>
+<p>可达图（reachability graph）由点集 $C_R$ 和边集 T 构成，并且<br>$(<br>(l, s), st,(l^<br>′<br>, s^<br>′<br>)<br>)<br>∈ T ⇔ (l, st, l^<br>′<br>) ∈ ∆ 且 (s, s^<br>′<br>) ∈ [[st]]$</p>
+</blockquote>
+<p><strong>一般通过构造可达图获取$C_R$</strong></p>
 
       
     </div>
@@ -285,19 +265,19 @@ free(F_i)∪ free(G_i)</script><p>对 φ 中的每一个约束变元 x，若 $x 
     
 <nav id="article-nav">
   
-    <a href="/2023/06/08/procedure/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/06/09/Software-Analysis-Verification/strongest-postcondition/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          procedure
+          strongest-postcondition
         
       </div>
     </a>
   
   
-    <a href="/2023/06/07/test/array/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2023/06/08/Software-Analysis-Verification/termination/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">array</div>
+      <div class="article-nav-title">termination</div>
     </a>
   
 </nav>
@@ -520,6 +500,23 @@ free(F_i)∪ free(G_i)</script><p>对 φ 中的每一个约束变元 x，若 $x 
 
 
 <!-- END INTEGRATIONS -->
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 </html>

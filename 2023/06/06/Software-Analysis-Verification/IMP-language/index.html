@@ -7,34 +7,28 @@
 <head>
   <meta charset="utf-8">
   
-  <title>一阶逻辑 | rjw&#39;s blog</title>
+  <title>IMP language | rjw&#39;s blog</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <meta name="description" content="一阶逻辑语法符号集 构造规则  自由变元和约束变元 量词辖域的确定：按匹配到的最大公式为它的辖域。 语义解释 解释函数为常元，函数和谓词指定了取值，变元应根据赋值ρ取值 对项求值 对公式求值 可满足性 语义蕴涵 证明系统使用相继式证明系统$S_{FOL}$，对于不含量词的公式，可按命题逻辑的规则处理 推理规则含量词：  $S_{FOL}$的性质 一阶逻辑的半可判定性一阶逻辑是半可判定的（semi-">
+  <meta name="description" content="IMPIMP 是一个简单的示例语言 IMP 语言中包含了命令式程序设计语言最重要、最核心的语言要素。 语法主要关注抽象语法   语法范畴： 整数集 Z, 用 a, b, c 表示整数。 变元集 Var，用 x, y, z 表示变元。 算术表达式集 AExp，用 e 表示算术表达式。 布尔表达式集 BExp，用 p, q 表示布尔表达式。 语句集 Stmt，用 st 表示语句。   语义状态 算术表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一阶逻辑">
-<meta property="og:url" content="http://example.com/2023/06/01/first-order-logic/index.html">
+<meta property="og:title" content="IMP language">
+<meta property="og:url" content="http://example.com/2023/06/06/Software-Analysis-Verification/IMP-language/index.html">
 <meta property="og:site_name" content="rjw&#39;s blog">
-<meta property="og:description" content="一阶逻辑语法符号集 构造规则  自由变元和约束变元 量词辖域的确定：按匹配到的最大公式为它的辖域。 语义解释 解释函数为常元，函数和谓词指定了取值，变元应根据赋值ρ取值 对项求值 对公式求值 可满足性 语义蕴涵 证明系统使用相继式证明系统$S_{FOL}$，对于不含量词的公式，可按命题逻辑的规则处理 推理规则含量词：  $S_{FOL}$的性质 一阶逻辑的半可判定性一阶逻辑是半可判定的（semi-">
+<meta property="og:description" content="IMPIMP 是一个简单的示例语言 IMP 语言中包含了命令式程序设计语言最重要、最核心的语言要素。 语法主要关注抽象语法   语法范畴： 整数集 Z, 用 a, b, c 表示整数。 变元集 Var，用 x, y, z 表示变元。 算术表达式集 AExp，用 e 表示算术表达式。 布尔表达式集 BExp，用 p, q 表示布尔表达式。 语句集 Stmt，用 st 表示语句。   语义状态 算术表">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/2023/06/01/first-order-logic/image-20230601171020530.png">
-<meta property="og:image" content="http://example.com/2023/06/01/first-order-logic/image-20230601171403353.png">
-<meta property="og:image" content="http://example.com/2023/06/01/first-order-logic/image-20230601171418350.png">
-<meta property="og:image" content="http://example.com/2023/06/01/first-order-logic/image-20230601171517534.png">
-<meta property="og:image" content="http://example.com/2023/06/01/first-order-logic/image-20230601171638108.png">
-<meta property="og:image" content="http://example.com/2023/06/01/first-order-logic/image-20230601172154058.png">
-<meta property="og:image" content="http://example.com/2023/06/01/first-order-logic/image-20230601172531775.png">
-<meta property="og:image" content="http://example.com/2023/06/01/first-order-logic/image-20230601173139107.png">
-<meta property="og:image" content="http://example.com/2023/06/01/first-order-logic/image-20230601173203138.png">
-<meta property="og:image" content="http://example.com/2023/06/01/first-order-logic/image-20230601173511586.png">
-<meta property="og:image" content="http://example.com/2023/06/01/first-order-logic/image-20230601173747934.png">
-<meta property="article:published_time" content="2023-06-01T11:45:01.000Z">
-<meta property="article:modified_time" content="2023-06-10T12:26:29.168Z">
+<meta property="og:image" content="http://example.com/2023/06/06/Software-Analysis-Verification/IMP-language/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-06%20213056.png">
+<meta property="og:image" content="http://example.com/2023/06/06/Software-Analysis-Verification/IMP-language/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-06%20213326.png">
+<meta property="og:image" content="http://example.com/2023/06/06/Software-Analysis-Verification/IMP-language/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-06%20214217.png">
+<meta property="og:image" content="http://example.com/2023/06/06/Software-Analysis-Verification/IMP-language/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-06%20214417.png">
+<meta property="og:image" content="http://example.com/2023/06/06/Software-Analysis-Verification/IMP-language/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-06%20220338.png">
+<meta property="article:published_time" content="2023-06-06T13:26:21.000Z">
+<meta property="article:modified_time" content="2023-06-07T13:27:50.305Z">
 <meta property="article:author" content="JiaWei Ren">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/06/01/first-order-logic/image-20230601171020530.png">
+<meta name="twitter:image" content="http://example.com/2023/06/06/Software-Analysis-Verification/IMP-language/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-06%20213056.png">
   
     <link rel="alternative" href="/atom.xml" title="rjw&#39;s blog" type="application/atom+xml">
   
@@ -178,13 +172,13 @@
   <section id="main">
     
     <h2 itemprop="name">
-      <a class="article-title" href="/2023/06/01/first-order-logic/">一阶逻辑</a>
+      <a class="article-title" href="/2023/06/06/Software-Analysis-Verification/IMP-language/">IMP language</a>
     </h2>
 
 
     <div class="row">
 <div class="col-md-9 col-sm-9 blog-posts">
-<article id="post-first-order-logic" class="article article-type-post blog-item" itemscope itemprop="blogPost">
+<article id="post-Software-Analysis-Verification/IMP-language" class="article article-type-post blog-item" itemscope itemprop="blogPost">
   <div class="article-meta">
   </div>
   <div class="article-inner">
@@ -194,11 +188,11 @@
       <ul class="blog-info">
 	<li><i class="fa fa-user"></i> Anonymous</li>
 	<li><i class="fa fa-calendar"></i>
-	  <time datetime="2023-06-01T11:45:01.000Z" itemprop="datePublished">2023/06/01</time>
+	  <time datetime="2023-06-06T13:26:21.000Z" itemprop="datePublished">2023/06/06</time>
 
 	</li>
 	<li class="hidden-xs"><i class="fa fa-comments"></i>
-	  <a href="http://example.com/2023/06/01/first-order-logic/#disqus_thread" class="article-comment-link">Comments</a>
+	  <a href="http://example.com/2023/06/06/Software-Analysis-Verification/IMP-language/#disqus_thread" class="article-comment-link">Comments</a>
 	</li>
 	<li class="hidden-xs"><i class="fa fa-tags"></i> 
 	  
@@ -220,26 +214,74 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="一阶逻辑"><a href="#一阶逻辑" class="headerlink" title="一阶逻辑"></a>一阶逻辑</h1><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="符号集"><a href="#符号集" class="headerlink" title="符号集"></a>符号集</h3><img src="/2023/06/01/first-order-logic/image-20230601171020530.png" class="" title="label">
-<h3 id="构造规则"><a href="#构造规则" class="headerlink" title="构造规则"></a>构造规则</h3><img src="/2023/06/01/first-order-logic/image-20230601171403353.png" class="" title="label">
-<img src="/2023/06/01/first-order-logic/image-20230601171418350.png" class="" title="label">
-<h3 id="自由变元和约束变元"><a href="#自由变元和约束变元" class="headerlink" title="自由变元和约束变元"></a>自由变元和约束变元</h3><img src="/2023/06/01/first-order-logic/image-20230601171517534.png" class="" title="label">
-<p>量词辖域的确定：按匹配到的最大公式为它的辖域。</p>
-<h2 id="语义"><a href="#语义" class="headerlink" title="语义"></a>语义</h2><h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><img src="/2023/06/01/first-order-logic/image-20230601171638108.png" class="" title="label">
-<p>解释函数为<strong>常元</strong>，<strong>函数</strong>和<strong>谓词</strong>指定了取值，变元应根据赋值ρ取值</p>
-<h3 id="对项求值"><a href="#对项求值" class="headerlink" title="对项求值"></a>对项求值</h3><img src="/2023/06/01/first-order-logic/image-20230601172154058.png" class="" title="label">
-<h3 id="对公式求值"><a href="#对公式求值" class="headerlink" title="对公式求值"></a>对公式求值</h3><img src="/2023/06/01/first-order-logic/image-20230601172531775.png" class="" title="label">
-<h3 id="可满足性"><a href="#可满足性" class="headerlink" title="可满足性"></a>可满足性</h3><img src="/2023/06/01/first-order-logic/image-20230601173139107.png" class="" title="label">
-<h3 id="语义蕴涵"><a href="#语义蕴涵" class="headerlink" title="语义蕴涵"></a>语义蕴涵</h3><img src="/2023/06/01/first-order-logic/image-20230601173203138.png" class="" title="label">
-<h2 id="证明系统"><a href="#证明系统" class="headerlink" title="证明系统"></a>证明系统</h2><p>使用相继式证明系统$S_{FOL}$，对于不含量词的公式，可按命题逻辑的规则处理</p>
-<h3 id="推理规则"><a href="#推理规则" class="headerlink" title="推理规则"></a>推理规则</h3><p>含量词：</p>
-<img src="/2023/06/01/first-order-logic/image-20230601173511586.png" class="" title="label">
-<h3 id="S-FOL-的性质"><a href="#S-FOL-的性质" class="headerlink" title="$S_{FOL}$的性质"></a>$S_{FOL}$的性质</h3><img src="/2023/06/01/first-order-logic/image-20230601173747934.png" class="" title="label">
-<h3 id="一阶逻辑的半可判定性"><a href="#一阶逻辑的半可判定性" class="headerlink" title="一阶逻辑的半可判定性"></a>一阶逻辑的半可判定性</h3><p>一阶逻辑是<strong>半可判定的（<em>semi-decidable</em>）</strong>, 即判定一阶逻辑公式是否有效的算法</p>
+        <h1 id="IMP"><a href="#IMP" class="headerlink" title="IMP"></a>IMP</h1><p>IMP 是一个简单的示例语言</p>
+<p>IMP 语言中包含了命令式程序设计语言最重要、最核心的语言要素。</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>主要关注抽象语法</p>
+<blockquote>
+<p> 语法范畴：</p>
+<p>整数集 Z, 用 <em>a</em>, <em>b</em>, <em>c</em> 表示整数。</p>
+<p>变元集 <em>Var</em>，用 <em>x</em>, <em>y</em>, <em>z</em> 表示变元。</p>
+<p>算术表达式集 <em>AExp</em>，用 <em>e</em> 表示算术表达式。</p>
+<p>布尔表达式集 <em>BExp</em>，用 <em>p,</em> <em>q</em> 表示布尔表达式。</p>
+<p>语句集 <em>Stmt</em>，用 <em>st</em> 表示语句。</p>
+</blockquote>
+<img src="/2023/06/06/Software-Analysis-Verification/IMP-language/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-06%20213056.png" class="">
+<h2 id="语义"><a href="#语义" class="headerlink" title="语义"></a>语义</h2><h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><img src="/2023/06/06/Software-Analysis-Verification/IMP-language/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-06%20213326.png" class="">
+<h3 id="算术表达式的语义"><a href="#算术表达式的语义" class="headerlink" title="算术表达式的语义"></a>算术表达式的语义</h3><blockquote>
+<p>算术表达式 e 在状态 s 下的值 $[[e]]_s$ 递归定义如下：</p>
 <ul>
-<li>只有在该公式是有效式的前提下，才能保证在有限时间内终止并给出正确结果；</li>
-<li>否则，可能永远不终止。</li>
+<li>$[[c]]_s = c$, 其中 c 为整数</li>
+<li>$[[x]]_s = s(x)$，其中 x 为变元</li>
+<li>$[[e1 + e2]]_s = [[e1]]_s + [[e2]]_s$</li>
+<li>$[[e1 − e2]]_s = [[e1]]_s − [[e2]]_s$</li>
+<li>$[[e1 ∗ e2]]_s = [[e1]]_s × [[e2]]_s$</li>
 </ul>
+</blockquote>
+<h3 id="布尔表达式的语义"><a href="#布尔表达式的语义" class="headerlink" title="布尔表达式的语义"></a>布尔表达式的语义</h3><blockquote>
+<p>布尔表达式 <em>p</em> 在状态 <em>s</em> 下的值 [[<em>p</em>]]<em>s</em> 递归定义如下：</p>
+<ul>
+<li><p>$[[true]]_s = true$</p>
+</li>
+<li><p>$[[false]]_s = false$</p>
+</li>
+<li><p>$[[e1 = e2]]_s = true 当且仅当 [[e1]]_s = [[e2]]_s$</p>
+</li>
+<li><p>$[[e1 ≤ e2]]_s = true 当且仅当 [[e1]]_s ≤ [[e2]]_s$</p>
+</li>
+<li><p>$[[¬p]]_s = true 当且仅当 [[p]]_s = false$</p>
+</li>
+<li><p>$[[p1 ∧ p2]]_s = true$ 当且仅当 $[[p1]]_s$ 和 $[[p2]]_s $都为真</p>
+</li>
+</ul>
+</blockquote>
+<img src="/2023/06/06/Software-Analysis-Verification/IMP-language/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-06%20214217.png" class="">
+<h3 id="程序语句的语义"><a href="#程序语句的语义" class="headerlink" title="程序语句的语义"></a>程序语句的语义</h3><img src="/2023/06/06/Software-Analysis-Verification/IMP-language/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-06%20214417.png" class="">
+<blockquote>
+<p><strong>关系的组合</strong></p>
+<p>设 <em>R</em>1<em>,</em> <em>R</em>2 为定义在同一个集合 <em>X</em> 上的两个二元关系，<em>R</em>1 和 <em>R</em>2 的</p>
+<p>组合关系 <em>R</em>1 <em>◦</em> <em>R</em>2 定义为：</p>
+<p>$R1 ◦ R2 ::= {(a, b) | 存在c ∈ X, 使得(a, c) ∈ R1,(c, b) ∈ R2}$</p>
+</blockquote>
+<p>具体语句的语义：</p>
+<ul>
+<li><p>空语句的语义</p>
+<p>$[[skip]] = \{(s, s) | s ∈ S\}$</p>
+</li>
+<li><p>赋值语句的语义</p>
+<p>$[[x := e]] = \{(s, s<br>^′<br>) | s<br>^′ = s[x → [[e]]_s<br>]\}$</p>
+</li>
+<li><p>分支语句的语义</p>
+<p>$[[if (p)\{st1\} else \{st2\}]] =<br>\{ (s, s^<br>′<br>)|<br>[[p]]_s = true 且 (s, s^<br>′<br>) ∈ [[st1]]<br>或 [[p]]_s = false 且 (s, s^<br>′<br>) ∈ [[st2]]\}$</p>
+</li>
+<li><p>顺序语句的语义</p>
+<p>$[[st1; st2]] =[[st1]] ◦ [[st2]]<br>=\{(s, s^<br>′<br>) | 存在 s<br>^{′′} 使得 (s, s^<br>{′′}) ∈ [[st1]],(s^{<br>′′}<br>, s^<br>′<br>) ∈ [[st2]]\}$</p>
+</li>
+<li><p>循环语句的语义</p>
+<img src="/2023/06/06/Software-Analysis-Verification/IMP-language/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-06%20220338.png" class="">
+</li>
+</ul>
+<h3 id="语义等价"><a href="#语义等价" class="headerlink" title="语义等价"></a>语义等价</h3><p>如果对于任意状态$ s 和 s^<br>′，(s, s<br>^′<br>) ∈ [[st1]] $ 当且仅当 $ (s, s^<br>′<br>) ∈ [[st2]]$，<br>则称语句 $st1$ 和 $st2$ 是语义等价（semantically equivalent）的</p>
+<p><strong>可用此定义证明语义等价</strong></p>
 
       
     </div>
@@ -248,19 +290,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2023/06/01/basic-concept/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/06/06/Software-Analysis-Verification/hoare/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          基本概念
+          hoare
         
       </div>
     </a>
   
   
-    <a href="/2023/06/01/propositional-logic/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2023/06/01/Software-Analysis-Verification/theories/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">命题逻辑</div>
+      <div class="article-nav-title">一阶理论</div>
     </a>
   
 </nav>
@@ -483,6 +525,23 @@
 
 
 <!-- END INTEGRATIONS -->
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 </html>
