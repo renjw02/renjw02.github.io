@@ -22,10 +22,10 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "avatar.png"
+  avatar           : "./avatar.png"
   name             : "Jiawei Ren"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "Master’s student in Computer Science at UCSD. Interested in natural language processing, embodied AI, and large language models."
   location         : "La Jolla, CA"
   employer         : "UC San Diego"
   uri              : # URL
